@@ -1,0 +1,27 @@
+{
+    "licitaciones": [{
+            "nombre": "Licitacion 1",
+            "descripcion": "Una descripcion",
+            "fechaCreacion": "01-01-2019",
+            "fechaRespuesta": "10-01-2019",
+            "responsable": "Pablo Cornejo",
+            "estado": "creada"
+        },
+        {
+            "nombre": "Licitacion 2",
+            "descripcion": "Una descripcion",
+            "fechaCreacion": "01-01-2019",
+            "fechaRespuesta": "10-01-2019",
+            "responsable": "Pablo Cornejo",
+            "estado": "creada"
+        },
+        {
+            "nombre": "Licitacion 3",
+            "descripcion": "Una descripcion",
+            "fechaCreacion": "01-01-2019",
+            "fechaRespuesta": "10-01-2019",
+            "responsable": "Pablo Cornejo",
+            "estado": "creada"
+        }
+    ]
+}
