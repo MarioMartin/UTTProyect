@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import IntegrationReactSelect from './Multiselect';
-import MaterialUIPickers from './DatePicker';
+//import TextField from '@material-ui/core/TextField';
+import UTTextFields from './UTTextFields';
+import UTDatePicker from './UTDatePicker';
+import UTMultiSelect from './UTMultiSelect';
+import UTSelect from './UTSelect';
+
 
 
 
@@ -17,7 +20,8 @@ class Formulario extends Component {
             fechaCreacion: new Date(),
             fechaRespuesta: "",
             responsable: "",
-            estado: ""
+            estado: "",
+            skills: []
         };
 
         this.hadleInput = this.hadleInput.bind(this);
@@ -25,78 +29,104 @@ class Formulario extends Component {
 
     }
 
-
-
     hadleInput(e) {
-        const { value, name } = e.target;
+
+        if (e.target) {
+            const { value, name } = e.target;
+
+            this.setState({
+                [name]: value
+            });
+            console.log(this.state);
+
+        } else {
+            this.setState({
+                fechaRespuesta: e
+            });
+            console.log(this.state);
+
+        }
+
+    }
+
+    //date
+    hadleInput2 = (event) => {
+        //alert(event);
         this.setState({
-            [name]: value
+            fechaRespuesta: event
         });
         //console.log(this.state);
+
+    }
+
+    //multiselect
+    hadleInput3 = (event) => {
+        // alert(event);
+        this.setState({
+            skills: event
+        });
+        //console.log(this.state);
+
     }
 
     handleSubmit(e) {
         e.preventDefault();
         this.props.onAddTodo(this.state);
-        //console.log("Enviando data...");
-        //console.log(this.state);
+
     }
 
     render() {
         return (
+
             <div className="Formulario">
                 <form className="" onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <input type="text"
+                        <UTTextFields
+
+                            label="Licitación SSA"
                             name="nombre"
-                            className="form-control"
-                            placeholder="Ingrese Licitación SSA"
                             onChange={this.hadleInput}
+                            margin="normal"
                         />
                     </div>
                     <div className="form-group">
-                        <input type="text"
+                        <UTTextFields
+                            id="standard-name"
+                            label="Descripcion"
                             name="descripcion"
-                            className="form-control"
-                            placeholder="Descripcion"
                             onChange={this.hadleInput}
+                            margin="normal"
                         />
                     </div>
                     <div className="form-group">
-                        <TextField
-                            type="date"
-                            name="fechaRespuesta"
-                            className="form-control"
-                            defaultValue="Fecha Respuesta"
-                            onChange={this.hadleInput}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input type="text"
+                        <UTTextFields
+                            id="standard-name"
+                            label="Responsable"
                             name="responsable"
-                            className="form-control"
-                            placeholder="Estado SSA"
+                            onChange={this.hadleInput}
+                            margin="normal"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <UTSelect
                             onChange={this.hadleInput}
                         />
                     </div>
                     <div className="form-group">
-                        <select
-                            name="estado"
-                            className="form-control"
-                            //value={this.state.prioridad}
-                            onChange={this.hadleInput}
-                        >
-                            <option>Baja</option>
-                            <option>Media</option>
-                            <option>Alta</option>
-                        </select>
+                        <UTDatePicker
+                            onGetData={this.hadleInput2}
+                        />
                     </div>
                     <div className="form-group">
-                        <IntegrationReactSelect />
+                        <UTMultiSelect
+                            name="skill"
+                            onChange={this.hadleInput3}
+                        />
                     </div>
                     <div className="form-group">
-                        <MaterialUIPickers />
+
                     </div>
+
                     <Button type="submit" variant="contained" color="primary">
                         Guardar
                     </Button>

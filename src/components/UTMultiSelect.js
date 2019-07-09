@@ -13,46 +13,6 @@ import PropTypes from 'prop-types';
 
 import { skills } from '../skills.json';
 
-/*const suggestions = [
-  { label: 'Afghanistan' },
-  { label: 'Aland Islands' },
-  { label: 'Albania' },
-  { label: 'Algeria' },
-  { label: 'American Samoa' },
-  { label: 'Andorra' },
-  { label: 'Angola' },
-  { label: 'Anguilla' },
-  { label: 'Antarctica' },
-  { label: 'Antigua and Barbuda' },
-  { label: 'Argentina' },
-  { label: 'Armenia' },
-  { label: 'Aruba' },
-  { label: 'Australia' },
-  { label: 'Austria' },
-  { label: 'Azerbaijan' },
-  { label: 'Bahamas' },
-  { label: 'Bahrain' },
-  { label: 'Bangladesh' },
-  { label: 'Barbados' },
-  { label: 'Belarus' },
-  { label: 'Belgium' },
-  { label: 'Belize' },
-  { label: 'Benin' },
-  { label: 'Bermuda' },
-  { label: 'Bhutan' },
-  { label: 'Bolivia, Plurinational State of' },
-  { label: 'Bonaire, Sint Eustatius and Saba' },
-  { label: 'Bosnia and Herzegovina' },
-  { label: 'Botswana' },
-  { label: 'Bouvet Island' },
-  { label: 'Brazil' },
-  { label: 'British Indian Ocean Territory' },
-  { label: 'Brunei Darussalam' },
-].map(suggestion => ({
-  value: suggestion.label,
-  label: suggestion.label,
-
-}));*/
 
 const suggestions = skills.map((data, i) => ({
     value: data,
@@ -69,8 +29,9 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     padding: 0,
     height: 'auto',
-    backgroundColor: 'white',
-    borderRadius: '.25rem',
+    
+    //backgroundColor: 'white',
+    //borderRadius: '.25rem',
   },
   valueContainer: {
     display: 'flex',
@@ -282,18 +243,21 @@ const components = {
   ValueContainer,
 };
 
-export default function IntegrationReactSelect() {
+export default function IntegrationReactSelect({onChange}) {
   const classes = useStyles();
   const theme = useTheme();
   const [single, setSingle] = React.useState(null);
   const [multi, setMulti] = React.useState(null);
 
+  
   function handleChangeSingle(value) {
     setSingle(value);
   }
 
   function handleChangeMulti(value) {
     setMulti(value);
+    onChange(multi);
+    //console.log(multi);
   }
 
   const selectStyles = {

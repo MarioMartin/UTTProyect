@@ -1,0 +1,41 @@
+{
+    "todos": [
+        {
+            "nombre": "Mario Hernandes",
+            "contrato": "BECh",
+            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
+            "skills": ["Java","Sharepoint","Angular"]
+        },
+        {
+            "nombre": "Juan Perez",
+            "contrato": "BECh",
+            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
+            "skills": ["Java",".NET","Cobol"]
+        },
+        {
+            "nombre": "Pedro Perez",
+            "contrato": "BECh",
+            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
+            "skills": ["Java",".NET","Cobol"]
+        },
+        {
+            "nombre": "Martia Perez",
+            "contrato": "BECh",
+            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
+            "skills": ["Java",".NET","Cobol"]
+        },
+        {
+            "nombre": "Claudia Perez",
+            "contrato": "ITAU",
+            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
+            "skills": ["Java",".NET","Cobol"]
+        },
+        {
+            "nombre": "Sara Perez",
+            "contrato": "BECh",
+            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
+            "skills": ["Java",".NET","Cobol"]
+        }
+       
+    ]
+}

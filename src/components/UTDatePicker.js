@@ -11,18 +11,11 @@ import {
 
 const useStyles = makeStyles({
   grid: {
-    width: '60%',
-  },
-  input: {
-    display: 'flex',
-    padding: 0,
-    height: 'auto',
-    backgroundColor: 'white',
-    borderRadius: '.25rem',
+    //width: '60%',
   },
 });
 
-export default function MaterialUIPickers() {
+export default function UTDatePicker({onGetData}) {
   // The first commit of Material-UI
   const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
 
@@ -30,6 +23,7 @@ export default function MaterialUIPickers() {
 
   function handleDateChange(date) {
     setSelectedDate(date);
+    onGetData(date);
   }
 
   return (
@@ -38,7 +32,7 @@ export default function MaterialUIPickers() {
         <KeyboardDatePicker
           margin="normal"
           id="mui-pickers-date"
-          //label="Date picker"
+          label="Date picker"
           value={selectedDate}
           onChange={handleDateChange}
           KeyboardButtonProps={{

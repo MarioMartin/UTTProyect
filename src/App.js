@@ -8,6 +8,11 @@ import ingresoLicitacion from './views/IngresoLicitacion';
 import ConsultaLicitacion from './views/ConsultaLicitacion';
 import ConsultaSkill from './views/ConsultaSkill';
 
+import Example from './components/example';
+
+
+
+
 import './App.css';
 
 function App() {
@@ -31,6 +36,7 @@ function App() {
 const Home = () => (
   <div className="Home">
     <h1>Home</h1>
+ 
 
   </div>
 );

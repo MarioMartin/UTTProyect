@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Formulario from '../components/Formulario';
 import Licitacion from '../components/Licitacion';
-//import { licitaciones } from '../licitaciones.json';
+
 import firebase from 'firebase';
 import { DB_CONFIG } from '../config/config';
 import 'firebase/database';
+
+import '../components/resource/styles.css';
 
 
 
@@ -17,8 +19,12 @@ class IngresoLicitacion extends Component {
     }
     this.handleAddLicitacion = this.handleAddLicitacion.bind(this);
     this.removeLicitacion = this.removeLicitacion.bind(this);
-    this.app = firebase.initializeApp(DB_CONFIG);
+
+    //this.app = firebase.initializeApp(DB_CONFIG);
+    this.app = !firebase.apps.length ? firebase.initializeApp(DB_CONFIG) : firebase.app();
+
     this.db = this.app.database().ref().child('licitaciones');
+
 
   }
 
@@ -35,7 +41,6 @@ class IngresoLicitacion extends Component {
         estado: snap.val().estado
       });
       this.setState(licitaciones)
-      //console.log(this.state);
     });
 
     this.db.on('child_removed', snap => {
@@ -70,7 +75,7 @@ class IngresoLicitacion extends Component {
 
     return (
       <div className="row mt-4">
-        <div className="col-md-3 mt-4 p-4 bg-primary">
+        <div className="col-md-3 mt-4 p-4 backFormulario">
           <Formulario onAddTodo={this.handleAddLicitacion} />
         </div>
         <div className="col-md-9 ">
