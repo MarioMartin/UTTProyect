@@ -24,17 +24,15 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     height: 250,
+    width:230,
   },
   input: {
     display: 'flex',
     padding: 0,
     height: 'auto',
-    
-    //backgroundColor: 'white',
-    //borderRadius: '.25rem',
   },
   valueContainer: {
-    display: 'flex',
+    //display: 'flex',
     flexWrap: 'wrap',
     flex: 1,
     alignItems: 'center',
@@ -246,13 +244,12 @@ const components = {
 export default function IntegrationReactSelect({onChange}) {
   const classes = useStyles();
   const theme = useTheme();
-  const [single, setSingle] = React.useState(null);
   const [multi, setMulti] = React.useState(null);
 
   
-  function handleChangeSingle(value) {
+  /*function handleChangeSingle(value) {
     setSingle(value);
-  }
+  }*/
 
   function handleChangeMulti(value) {
     setMulti(value);

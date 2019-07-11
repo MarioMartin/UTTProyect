@@ -10,9 +10,6 @@ import ConsultaSkill from './views/ConsultaSkill';
 
 import Example from './components/example';
 
-
-
-
 import './App.css';
 
 function App() {

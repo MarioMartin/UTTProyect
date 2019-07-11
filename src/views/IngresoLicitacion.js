@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Formulario from '../components/Formulario';
-import Licitacion from '../components/Licitacion';
+import UTCardLicitacion from '../components/UTCardLicitacion';
 
 import firebase from 'firebase';
 import { DB_CONFIG } from '../config/config';
@@ -33,12 +33,14 @@ class IngresoLicitacion extends Component {
     this.db.on('child_added', snap => {
       licitaciones.push({
         id: snap.key,
+        SSA: snap.val().SSA,
         nombre: snap.val().nombre,
         descripcion: snap.val().descripcion,
         fechaCreacion: snap.val().fechaCreacion,
         fechaRespuesta: snap.val().fechaRespuesta,
         responsable: snap.val().responsable,
-        estado: snap.val().estado
+        estado: snap.val().estado,
+        skills:snap.val().skills
       });
       this.setState(licitaciones)
     });
@@ -69,13 +71,14 @@ class IngresoLicitacion extends Component {
 
     const licitaciones = this.state.licitaciones.map((data, i) => {
       return (
-        <Licitacion key={i} data={data} removeLicit={this.removeLicitacion} />
+        <UTCardLicitacion key={i} data={data} />
+        //<Licitacion key={i} data={data} removeLicit={this.removeLicitacion} />
       )
     });
 
     return (
-      <div className="row mt-4">
-        <div className="col-md-3 mt-4 p-4 backFormulario">
+      <div className="row mt-0">
+        <div className="col-md-3 mt-0 p-4 backFormulario">
           <Formulario onAddTodo={this.handleAddLicitacion} />
         </div>
         <div className="col-md-9 ">

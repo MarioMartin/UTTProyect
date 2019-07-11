@@ -30,7 +30,7 @@ class Licitacion extends Component {
                     <p className="card-text">{this.props.data.fechaCreacion}</p>
                 </div>
                 <div className="card-footer">
-        {/*<a href="#" className="btn btn-primary" onClick={() => this.handlerRemove(this.props.data.id)} >eliminar</a>*/}
+                    {/*<a href="#" className="btn btn-primary" onClick={() => this.handlerRemove(this.props.data.id)} >eliminar</a>*/}
 
                     <Link to={{
                         pathname: '/consultaLicitacion',

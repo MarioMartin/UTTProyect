@@ -1,4 +1,4 @@
-import React, { Component, useState  } from 'react';
+import React, {  useState  } from 'react';
 
 export default function Example(props) {
     // Declare a new state variable, which we'll call "count"

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+
+import UTMigaja from '../components/UTMigaja';
+
+import '../App.css';
 
 
 class ConsultaLicitacion extends Component {
@@ -24,24 +23,18 @@ class ConsultaLicitacion extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <CssBaseline />
-        <Container maxWidth="md">
-          <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} />
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <Paper >xs=12</Paper>
-            </Grid>
-            <Grid item xs={6}>
-              <Paper >xs=6</Paper>
-            </Grid>
-            <Grid item xs={6}>
-              <Paper >xs=6</Paper>
-            </Grid>
-           
-          </Grid>
-        </Container>
-      </React.Fragment>
+      <div className="container bgcolor-CLicitacion" >
+        <div className="row ">
+          <div className="col-md-12">
+          <UTMigaja />
+          </div>
+        </div>
+        <div className="row ">
+          <div className="col-md-12">
+          formulario
+          </div>
+        </div>
+      </div>
     );
   }
 }

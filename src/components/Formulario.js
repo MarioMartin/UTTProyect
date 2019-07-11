@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
-//import TextField from '@material-ui/core/TextField';
 import UTTextFields from './UTTextFields';
 import UTDatePicker from './UTDatePicker';
 import UTMultiSelect from './UTMultiSelect';
@@ -15,13 +14,14 @@ class Formulario extends Component {
     constructor() {
         super();
         this.state = {
-            nombre: "",
-            descripcion: "",
-            fechaCreacion: new Date(),
-            fechaRespuesta: "",
-            responsable: "",
-            estado: "",
-            skills: []
+            SSA: "ACC-24680",
+            nombre: "Moduarizacion canal NBL",
+            descripcion: "Una brave descripcion para saber de que trata la Licitacion",
+            fechaCreacion: new Date("01-01-2019"),
+            fechaRespuesta: "29-01-2019",
+            responsable: "Pablo cornejo",
+            estado: "En Curso",
+            skills: ["Mongo DB", "Express", "Angular", "Node.js"]
         };
 
         this.hadleInput = this.hadleInput.bind(this);
@@ -37,36 +37,25 @@ class Formulario extends Component {
             this.setState({
                 [name]: value
             });
-            console.log(this.state);
+            
 
         } else {
             this.setState({
                 fechaRespuesta: e
             });
-            console.log(this.state);
-
         }
 
     }
-
-    //date
     hadleInput2 = (event) => {
-        //alert(event);
         this.setState({
             fechaRespuesta: event
         });
-        //console.log(this.state);
-
     }
 
-    //multiselect
     hadleInput3 = (event) => {
-        // alert(event);
         this.setState({
             skills: event
         });
-        //console.log(this.state);
-
     }
 
     handleSubmit(e) {
@@ -82,8 +71,15 @@ class Formulario extends Component {
                 <form className="" onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <UTTextFields
-
                             label="Licitación SSA"
+                            name="SSA"
+                            onChange={this.hadleInput}
+                            margin="normal"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <UTTextFields
+                            label="Nombre"
                             name="nombre"
                             onChange={this.hadleInput}
                             margin="normal"
@@ -109,6 +105,7 @@ class Formulario extends Component {
                     </div>
                     <div className="form-group">
                         <UTSelect
+                            name="estado"
                             onChange={this.hadleInput}
                         />
                     </div>
