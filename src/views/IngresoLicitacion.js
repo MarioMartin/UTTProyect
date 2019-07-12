@@ -18,12 +18,10 @@ class IngresoLicitacion extends Component {
       licitaciones: []
     }
     this.handleAddLicitacion = this.handleAddLicitacion.bind(this);
-    this.removeLicitacion = this.removeLicitacion.bind(this);
-
-    //this.app = firebase.initializeApp(DB_CONFIG);
+    this.removeLicitacion = this.removeLicitacion.bind(this);  
     this.app = !firebase.apps.length ? firebase.initializeApp(DB_CONFIG) : firebase.app();
-
     this.db = this.app.database().ref().child('licitaciones');
+    //this.app = firebase.initializeApp(DB_CONFIG);
 
 
   }
@@ -40,7 +38,7 @@ class IngresoLicitacion extends Component {
         fechaRespuesta: snap.val().fechaRespuesta,
         responsable: snap.val().responsable,
         estado: snap.val().estado,
-        skills:snap.val().skills
+        skills:snap.val().skills,
       });
       this.setState(licitaciones)
     });

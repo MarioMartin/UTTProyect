@@ -15,7 +15,7 @@ class Formulario extends Component {
         super();
         this.state = {
             SSA: "ACC-24680",
-            nombre: "Moduarizacion canal NBL",
+            nombre: "Modularizacion canal NBL",
             descripcion: "Una brave descripcion para saber de que trata la Licitacion",
             fechaCreacion: new Date("01-01-2019"),
             fechaRespuesta: "29-01-2019",
@@ -60,6 +60,7 @@ class Formulario extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        //console.log(this.state);
         this.props.onAddTodo(this.state);
 
     }

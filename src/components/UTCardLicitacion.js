@@ -10,6 +10,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import UTSChip from './UTShip';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles(theme => ({
   },
   footer: {
     backgroundColor: '#efefef',
-    
+
   },
   expandOpen: {
     transform: 'rotate(180deg)',
@@ -37,11 +38,15 @@ const useStyles = makeStyles(theme => ({
 
 export default function UTCardLicitacion(props) {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
+  //console.log("Lista de skills 1");
+  //console.log(props.data.skills);
+  /*const ListaSkills = props.data.skills.map((data, i) => (
+    <UTSChip key={i} skill={data} />
+  ))*/
 
-  function handleExpandClick() {
-    setExpanded(!expanded);
-  }
+  /* function handleExpandClick() {
+     setExpanded(!expanded);
+   }*/
 
   return (
     <Card className={classes.card}>
@@ -74,11 +79,11 @@ export default function UTCardLicitacion(props) {
       </CardContent>
       <CardContent>
 
-        
+
         <Box display="flex"  >
           <Box flexGrow={1} >
             <Typography variant="textSecondary" color="textPrimary" component="p">
-             
+
             </Typography>
           </Box>
           <Box >
@@ -88,7 +93,7 @@ export default function UTCardLicitacion(props) {
 
         <Box display="flex"  >
           <Box flexGrow={1} >
-            <UTSChip skills={props.data.skills} />
+          <UTSChip  data={props.data.skills} />
           </Box>
           <Box >
             <Typography variant="textSecondary" color="textPrimary" component="p">
@@ -99,7 +104,14 @@ export default function UTCardLicitacion(props) {
       </CardContent>
       <CardActions className={classes.footer}>
         <Button size="medium" color="primary">
-          Buscar Candidatos
+          <Link to ={{
+            pathname:'/consultaLicitacion',
+            state:{
+              data: props.data
+            }
+          }}>
+            Buscar Candidato
+          </Link>
         </Button>
       </CardActions>
 

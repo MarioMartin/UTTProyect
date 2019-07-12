@@ -15,16 +15,16 @@ import { skills } from '../skills.json';
 
 
 const suggestions = skills.map((data, i) => ({
-    value: data,
-    label: data,
+  value: data,
+  label: data,
 }));
- 
+
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     height: 250,
-    width:230,
+    width: 230,
   },
   input: {
     display: 'flex',
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     flex: 1,
     alignItems: 'center',
     overflow: 'hidden',
-    
+
   },
   chip: {
     margin: theme.spacing(0.5, 0.25),
@@ -241,20 +241,24 @@ const components = {
   ValueContainer,
 };
 
-export default function IntegrationReactSelect({onChange}) {
+export default function IntegrationReactSelect({ onChange }) {
   const classes = useStyles();
   const theme = useTheme();
   const [multi, setMulti] = React.useState(null);
 
-  
-  /*function handleChangeSingle(value) {
-    setSingle(value);
-  }*/
-
   function handleChangeMulti(value) {
+
+    const lista = [];
+
+      if (value == null) {
+        //controla nulo
+      } else {
+        for (let i = 0; i < value.length; i++) {
+          lista.push(value[i].value);
+        }
+      }   
     setMulti(value);
-    onChange(multi);
-    //console.log(multi);
+    onChange(lista);
   }
 
   const selectStyles = {
