@@ -36,6 +36,7 @@ export default function UTCandidato() {
 
     setChecked(newChecked);
   };
+  
 
   return (
     <List dense className={classes.root}>

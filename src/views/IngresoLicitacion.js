@@ -70,7 +70,6 @@ class IngresoLicitacion extends Component {
     const licitaciones = this.state.licitaciones.map((data, i) => {
       return (
         <UTCardLicitacion key={i} data={data} />
-        //<Licitacion key={i} data={data} removeLicit={this.removeLicitacion} />
       )
     });
 

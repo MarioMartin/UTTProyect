@@ -12,6 +12,7 @@ import Divider from '@material-ui/core/Divider';
 import UTSChip from './UTShip';
 import { Link } from 'react-router-dom';
 
+
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: '100%',
@@ -38,15 +39,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function UTCardLicitacion(props) {
   const classes = useStyles();
-  //console.log("Lista de skills 1");
-  //console.log(props.data.skills);
-  /*const ListaSkills = props.data.skills.map((data, i) => (
-    <UTSChip key={i} skill={data} />
-  ))*/
 
-  /* function handleExpandClick() {
-     setExpanded(!expanded);
-   }*/
 
   return (
     <Card className={classes.card}>
@@ -54,7 +47,7 @@ export default function UTCardLicitacion(props) {
         <CardContent>
           <Box display="flex"  >
             <Box flexGrow={1} >
-              <Typography gutterBottom variant="h5" component="h2">
+              <Typography gutterBottom variant="h6" component="h2">
                 {props.data.SSA}
               </Typography>
             </Box>

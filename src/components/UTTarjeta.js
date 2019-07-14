@@ -41,64 +41,66 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function UTTarjeta({ nombre, contrato, descripcion, skills }) {
+export default function UTTarjeta(props) {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
-   
+
     function handleExpandClick() {
         setExpanded(!expanded);
     }
 
+    const tarjetas = props.colaboradores.map((data, i) => {
+        return (
+            <div className="col-md-4" key={i}>
+                <Card className={classes.card}>
+                    <CardHeader
+                        avatar={ <Avatar aria-label="Recipe" className={classes.avatar}> R</Avatar>}
+                        action={<IconButton aria-label="Settings"> <MoreVertIcon /> </IconButton> }
+                        title={data.nombre}
+                        subheader={data.contrato}
+                    />
+                    <CardMedia
+                        className={classes.media}
+                        image="/static/images/cards/paella.jpg"
+                        title="Paella dish"
+                    />
+                    <CardContent>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            {data.descripcion}
+                        </Typography>
+                    </CardContent>
+                    <CardActions disableSpacing>
+                        <IconButton aria-label="Add to favorites">
+                            <FavoriteIcon />
+                        </IconButton>
+                        <IconButton aria-label="Share">
+                            <ShareIcon />
+                        </IconButton>
+                        <IconButton
+                            className={clsx(classes.expand, {
+                                [classes.expandOpen]: expanded,
+                            })}
+                            onClick={handleExpandClick}
+                            aria-expanded={expanded}
+                            aria-label="Show more"
+                        >
+                            <ExpandMoreIcon />
+                        </IconButton>
+                    </CardActions>
+                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                        <CardContent>
+                            <Typography paragraph>Skills:</Typography>
+                            <UTListaSkill skills={data.skills} />
+                        </CardContent>
+                    </Collapse>
+                </Card>
+            </div>
+        )
+    });
+
     return (
-        <Card className={classes.card}>
-            <CardHeader
-                avatar={
-                    <Avatar aria-label="Recipe" className={classes.avatar}>
-                        R
-          </Avatar>
-                }
-                action={
-                    <IconButton aria-label="Settings">
-                        <MoreVertIcon />
-                    </IconButton>
-                }
-                title={nombre}
-                subheader={contrato}
-            />
-            <CardMedia
-                className={classes.media}
-                image="/static/images/cards/paella.jpg"
-                title="Paella dish"
-            />
-            <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    {descripcion}
-                </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-                <IconButton aria-label="Add to favorites">
-                    <FavoriteIcon />
-                </IconButton>
-                <IconButton aria-label="Share">
-                    <ShareIcon />
-                </IconButton>
-                <IconButton
-                    className={clsx(classes.expand, {
-                        [classes.expandOpen]: expanded,
-                    })}
-                    onClick={handleExpandClick}
-                    aria-expanded={expanded}
-                    aria-label="Show more"
-                >
-                    <ExpandMoreIcon />
-                </IconButton>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent>
-                    <Typography paragraph>Skills:</Typography>
-                        <UTListaSkill skills={skills} />
-                </CardContent>
-            </Collapse>
-        </Card>
+        <>
+            {tarjetas}
+        </>
     );
 }

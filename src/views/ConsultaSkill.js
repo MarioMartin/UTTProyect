@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { todos } from '../colaboradores.json';
+import { colaboradores } from '../colaboradores.json';
 import UTTarjeta from '../components/UTTarjeta';
+import UTBuscador from '../components/UTBuscador';
 
 
 class ConsultaSkill extends Component {
@@ -8,60 +9,42 @@ class ConsultaSkill extends Component {
   constructor() {
     super();
     this.state = {
-      todos
+      colaboradores: colaboradores,
+      termino: "",
     }
-    this.handleAddTarea = this.handleAddTarea.bind(this);
   }
 
-  handleAddTarea(todos) {
-    this.setState({
-      todos: [...this.state.todos, todos]
+  consultaAPI = () => {
+    const url = "https://pixabay.com/api/?key=13030946-b853deac1446dc74d49b36437&q=yellow+flowers&image_type=photo";
+
+    fetch(url)
+      .then(respuesta => respuesta.json())
+      .then(resultado => console.log(resultado.hits))
+  }
+
+  getBusqueda = (termino) => {
+    console.log("obtendra datos con :" + termino);
+
+    this.setState({ termino }, () => {
+      this.consultaAPI();
     });
   }
 
-  handlerRemoveTarea(id) {
 
-    if (window.confirm("Esta Seguro de Eliminar")) {
-
-      this.setState({
-        todos: this.state.todos.filter((e, i) => {
-          return i !== id;
-        })
-      })
-    }
-  }
 
   render() {
-
-    const tarjetas = this.state.todos.map((data, i) => {
-      return (
-
-        <div className="col-md-4" key={i}>
-          <UTTarjeta
-            nombre={data.nombre}
-            contrato={data.contrato}
-            descripcion={data.descripcion}
-            skills={data.skills}
-          />
-
-        </div>
-      )
-    });
-
     return (
-      <div className="App" >
+      <div className="container">
+        <div className="row mt-4">
+          <div className="col-md-12 bg-color-dark">
+            <UTBuscador getBusqueda={this.getBusqueda} />
+          </div>
+        </div>
 
-
-        <div className="container">
-          <div className="row mt-4">
-            <div className="col-2 text-center">
-
-            </div>
-
-            <div className="col-10 ">
-              <div className="row ">
-                {tarjetas}
-              </div>
+        <div className="row ">
+          <div className="col-md-12 ">
+            <div className="row">
+              <UTTarjeta colaboradores={colaboradores} />
             </div>
           </div>
         </div>
