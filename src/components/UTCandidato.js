@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -8,7 +8,9 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Checkbox from '@material-ui/core/Checkbox';
 import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
-import Typography from '@material-ui/core/Typography';
+import { colaboradores } from '../colaboradores.json';
+import UTLitleShip from './UTSLitleShip';
+//import React, { useEffect } from 'react'
 
 import foto from '.././images/perfil.jfif';
 
@@ -20,9 +22,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function UTCandidato() {
+export default function UTCandidato(props) {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([1]);
+  const [candidatos, setCandidatos] = React.useState(colaboradores);
+
+
+  useEffect(() => {
+    //setCandidatos()
+
+  })
 
   const handleToggle = value => () => {
     const currentIndex = checked.indexOf(value);
@@ -36,50 +45,68 @@ export default function UTCandidato() {
 
     setChecked(newChecked);
   };
-  
+
+  const skillsLicitacion = props.data;
+  //const skillsLicitacion = ["Angular", "SQL"];
+
+  candidatos.forEach(function (candidato) {
+    let skills = candidato.skills;
+    let infoSk = [];
+    let count = 0;
+
+    for (let i = 0; i < skills.length; i++) {
+      let skill = skills[i];
+
+      if (skillsLicitacion.includes(skill)) {
+        count++;
+        infoSk.push({ nombre: skill, tiene: 1 });
+
+      } else {
+        infoSk.push({ nombre: skill, tiene: 0 });
+      }
+    }
+    candidato.coincidencias = count;
+    candidato.infoSk = infoSk;
+
+  });
+
+
+  const ListaCandidatos = candidatos.sort((a, b) => a.coincidencias - b.coincidencias).map((data, i) => {
+    return (
+      <ListItem key={i} button>
+        <ListItemAvatar>
+          <Avatar
+            alt={`Avatar n°${1}`}
+            src={foto}
+          />
+        </ListItemAvatar>
+
+        <ListItemText
+          primary={data.nombre}
+          secondary={
+            <Fragment>
+             {data.contrato}
+            </Fragment>
+          }
+        />
+         <UTLitleShip dataIn={data.infoSk} />
+
+        <Divider variant="middle" />
+        <ListItemSecondaryAction>
+          <Checkbox
+            edge="end"
+            onChange={handleToggle(data)}
+            checked={checked.indexOf(data) !== -1}
+          //inputProps={{ 'aria-labelledby': labelId }}
+          />
+        </ListItemSecondaryAction>
+      </ListItem>
+    )
+  }).reverse()
 
   return (
     <List dense className={classes.root}>
-      {[0, 1, 2, 3].map(value => {
-        const labelId = `checkbox-list-secondary-label-${value}`;
-        return (
-          <ListItem key={value} button>
-            <ListItemAvatar>
-              <Avatar
-                alt={`Avatar n°${value + 1}`}
-                src={foto}
-              />
-            </ListItemAvatar>
-
-            <ListItemText
-          primary="Roberto Perez Carrasco"
-          secondary={
-            <React.Fragment>
-              <Typography
-                component="span"
-                variant="body2"
-                className={classes.inline}
-                color="textPrimary"
-              >
-                Ali Connors
-              </Typography>
-              {" ITAU - Asstente -  Fabrida de mantencion tarjeta credito"}
-            </React.Fragment>
-          }
-        />
-
-<Divider variant="middle" />
-            <ListItemSecondaryAction>
-              <Checkbox
-                edge="end"
-                onChange={handleToggle(value)}
-                checked={checked.indexOf(value) !== -1}
-                inputProps={{ 'aria-labelledby': labelId }}
-              />
-            </ListItemSecondaryAction>
-          </ListItem>
-        );
-      })}
+      {ListaCandidatos}
     </List>
   );
 }

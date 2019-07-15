@@ -1,0 +1,29 @@
+[33mcommit eec9c05652665e34b15d7ff9f3f6f51640d26ed6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Mario Hernandez <mario.ricardo.h@gmail.com>
+Date:   Fri Jul 12 12:46:11 2019 -0400
+
+    version 2
+
+[33mcommit 511d6bd4abea88c7c41f018a8bd59dd1d94ea1b5[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Mario Hernandez <mario.ricardo.h@gmail.com>
+Date:   Thu Jul 11 01:56:43 2019 -0400
+
+    1.0
+
+[33mcommit 69631cdc3e0983951fdbde11cb2587c024ec4f18[m[33m ([m[1;31moriginAcc/master[m[33m)[m
+Author: Mario Hernandez <mario.ricardo.h@gmail.com>
+Date:   Tue Jul 9 19:58:31 2019 -0400
+
+    segunda
+
+[33mcommit ee390bf224fababebc588634ce87b0a3b5262825[m
+Author: Mario Hernandez <mario.ricardo.h@gmail.com>
+Date:   Mon Jul 8 14:37:41 2019 -0400
+
+    primera
+
+[33mcommit 8dc870bd5d737daa85361f40bd660d09b40ef9aa[m
+Author: Mario Hernandez <mario.ricardo.h@gmail.com>
+Date:   Sat Jul 6 19:56:23 2019 -0400
+
+    Initial commit from Create React App

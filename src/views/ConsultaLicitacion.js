@@ -6,11 +6,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-import GrainIcon from '@material-ui/icons/Grain';
 import UTSChip from '../components/UTShip';
-
-
 
 import '../App.css';
 
@@ -20,84 +16,63 @@ class ConsultaLicitacion extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      licitacion: this.props.location.state.data,
+      licitacion: this.props.location.state.data,  
     };
   }
 
-  /*componentDidMount() {
-
-    const { licitacion } = this.props.location.state
-    this.setState(licitacion)
-    console.log();
-  }*/
-
-  
 
   render() {
 
-    /*const licitaciones = this.state.licitaciones.map((data, i) => {
-      return (
-        <UTCandidato />
-      )
-    });*/
+
 
     return (
-      <div className="container bgcolor-CLicitacion" >
+      <div className="container bgcolor-Cabecera" >
         <div className="row ">
           <div className="col-md-12">
             <UTMigaja />
           </div>
         </div>
-        <div className="row p-4" >
-          <div className="col-md-12">
+        <div className="row p-1">
+          <div className="col-md-9">
+            <h2>{this.state.licitacion.SSA}</h2>
+          </div>
+          <div className="col-md-3 text-right">
+            <Box> Creada el : 01-01-2019</Box>
+          </div>
+        </div>
 
-            <Box display="flex"  >
-              <Box flexGrow={1} >
-                <Typography gutterBottom variant="h5" >
-                  {this.state.licitacion.SSA}
-                </Typography>
-              </Box>
-              <Box >
-                Creada el : 01-01-2019
-              </Box>
-            </Box>
-            <Box display="flex"  >
-              <Box flexGrow={1} >
-                <Typography gutterBottom variant="h5" >
-                <UTSChip  data={this.state.licitacion.skills} />
-                </Typography>
-              </Box>
-              <Box >
-              
-              </Box>
-            </Box>
+        <div className="row p-1">
+          <div className="col-md-9">
             <Typography variant="button"  >
-              <Box > {this.state.licitacion.nombre}</Box>
+              {this.state.licitacion.nombre}
             </Typography>
-            <Divider variant="middle" />
+          </div>
+          <div className="col-md-3 text-right">
 
           </div>
         </div>
-        <div className="row ">
-          <div className="col-md-12">
 
-            <UTCandidato />
+        <div className="row p-1">
+          <div className="col-md-9">
+            <Typography variant="button"  >
+              <UTSChip data={this.state.licitacion.skills} />
+            </Typography>
+          </div>
+          <div className="col-md-3 text-right">
 
           </div>
         </div>
+        <Divider variant="middle" />
         <div className="row ">
           <div className="col-md-12">
-            <Button size="medium" color="primary">
-        
-              <Link to={{
-                pathname: '/consultaLicitacion',
-                state: {
-                  data: {}
-                }
-              }}>
-                Finalizar
-          </Link>
-            </Button>
+            <UTCandidato data={this.state.licitacion.skills}/>
+          </div>
+        </div>
+        <div className="row p-2 ">
+          <div className="col-md-12">
+            <Link to={{ pathname: '/consultaLicitacion', state: {} }}>
+              <button type="button" className="btn btn-dark"> Buscar Candidato</button>
+            </Link>
           </div>
         </div>
       </div>

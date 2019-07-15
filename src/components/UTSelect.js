@@ -35,7 +35,7 @@ export default function UTSelect({ onChange }) {
       <FormControl className={classes.formControl}>
       <InputLabel htmlFor="age-simple">Estado</InputLabel>
       <Select
-        value={value.age}
+        value={value}
         onChange={handleChange}
         name='estado'
         inputProps={{

@@ -8,33 +8,33 @@
         },
         {
             "nombre": "Juan Perez",
-            "contrato": "BECh",
+            "contrato": "BECH",
             "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "skills": ["Java",".NET","Cobol"]
+            "skills": ["Angular",".NET","Cobol"]
         },
         {
             "nombre": "Pedro Perez",
-            "contrato": "BECh",
+            "contrato": "BECH",
             "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "skills": ["Java",".NET","Cobol"]
+            "skills": ["Java"]
         },
         {
             "nombre": "Martia Perez",
-            "contrato": "BECh",
+            "contrato": "BECH",
             "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "skills": ["Java",".NET","Cobol"]
+            "skills": ["SQL",".NET","Javascript"]
         },
         {
             "nombre": "Claudia Perez",
             "contrato": "ITAU",
             "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "skills": ["Java",".NET","Cobol"]
+            "skills": ["Angular","Express","Angular","Node.js","Javascript"]
         },
         {
             "nombre": "Sara Perez",
-            "contrato": "BECh",
+            "contrato": "BECH",
             "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "skills": ["Java",".NET","Cobol"]
+            "skills": ["SQL"]
         }
        
     ]
