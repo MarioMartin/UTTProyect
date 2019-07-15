@@ -1,41 +1,36 @@
 {
     "colaboradores": [
         {
-            "nombre": "Mario Hernandes",
-            "contrato": "BECh",
-            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "skills": ["Java","Sharepoint","Angular"]
-        },
-        {
-            "nombre": "Juan Perez",
+            "nombre": "Mario Hernandez",
             "contrato": "BECH",
-            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "skills": ["Angular",".NET","Cobol"]
+            "descripcion": "Trabaja hace 5 años en accenture se ha desempeñado en distintas ....",
+            "CareerLevel": "Analista",
+            "skillss": [
+                {
+                    "skill": "SQL",
+                    "level": 1
+                },
+                {
+                    "skill": "Java",
+                    "level": 5
+                }
+            ]
         },
         {
-            "nombre": "Pedro Perez",
+            "nombre": "Fabian Aburto",
             "contrato": "BECH",
-            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "skills": ["Java"]
-        },
-        {
-            "nombre": "Martia Perez",
-            "contrato": "BECH",
-            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "skills": ["SQL",".NET","Javascript"]
-        },
-        {
-            "nombre": "Claudia Perez",
-            "contrato": "ITAU",
-            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "skills": ["Angular","Express","Angular","Node.js","Javascript"]
-        },
-        {
-            "nombre": "Sara Perez",
-            "contrato": "BECH",
-            "descripcion": "tabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "skills": ["SQL"]
+            "descripcion": "Pieza estrategica del contrato Bech, tambien es llamado 'El arma secreta'",
+            "CareerLevel": "Analista",
+            "skillss": [
+                {
+                    "skill": "SQL",
+                    "level": 1
+                },
+                {
+                    "skill": "Java",
+                    "level": 5
+                }
+            ]
         }
-       
     ]
 }

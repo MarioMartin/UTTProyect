@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
+import Avatar from '@material-ui/core/Avatar';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -16,14 +17,15 @@ const useStyles = makeStyles(theme => ({
 export default function UTLitleShip(props) {
     const classes = useStyles();
 
-    //console.log(props.data);
+    console.log(props.dataIn);
 
-    const minichips = props.dataIn.sort((a, b) => a.tiene - b.tiene).map((dato, i) => (
+    const minichips = props.dataIn.map((dato, i) => (
         <Chip
             key={i}
             size="small"
-            label={dato.nombre}
-            color={(dato.tiene) ? "secondary" : "default"}
+            avatar={<Avatar>{dato.level}</Avatar>}
+            label={dato.skill}
+            color={(dato.tiene) ? "secondary" : "secondary"}
             className={classes.chip}
         />
     )).reverse()

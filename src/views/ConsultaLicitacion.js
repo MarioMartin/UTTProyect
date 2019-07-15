@@ -16,14 +16,11 @@ class ConsultaLicitacion extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      licitacion: this.props.location.state.data,  
+      licitacion: this.props.location.state.data,
     };
   }
 
-
   render() {
-
-
 
     return (
       <div className="container bgcolor-Cabecera" >
@@ -37,7 +34,10 @@ class ConsultaLicitacion extends Component {
             <h2>{this.state.licitacion.SSA}</h2>
           </div>
           <div className="col-md-3 text-right">
-            <Box> Creada el : 01-01-2019</Box>
+            <Typography variant="h6" gutterBottom>
+              {this.state.licitacion.estado}
+            </Typography>
+
           </div>
         </div>
 
@@ -48,7 +48,7 @@ class ConsultaLicitacion extends Component {
             </Typography>
           </div>
           <div className="col-md-3 text-right">
-
+            Creada el : 01-01-2019
           </div>
         </div>
 
@@ -59,13 +59,13 @@ class ConsultaLicitacion extends Component {
             </Typography>
           </div>
           <div className="col-md-3 text-right">
-
+            Respuesta : 30-01-2019
           </div>
         </div>
         <Divider variant="middle" />
         <div className="row ">
           <div className="col-md-12">
-            <UTCandidato data={this.state.licitacion.skills}/>
+            <UTCandidato data={this.state.licitacion.skills} />
           </div>
         </div>
         <div className="row p-2 ">

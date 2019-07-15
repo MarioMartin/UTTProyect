@@ -46,8 +46,9 @@ export default function UTCandidato(props) {
     setChecked(newChecked);
   };
 
-  const skillsLicitacion = props.data;
   //const skillsLicitacion = ["Angular", "SQL"];
+  /*const skillsLicitacion = props.data;
+  const candidatosConSkill = [];
 
   candidatos.forEach(function (candidato) {
     let skills = candidato.skills;
@@ -60,15 +61,22 @@ export default function UTCandidato(props) {
       if (skillsLicitacion.includes(skill)) {
         count++;
         infoSk.push({ nombre: skill, tiene: 1 });
+        //candidatosConSkill.push(candidato)
 
       } else {
         infoSk.push({ nombre: skill, tiene: 0 });
       }
     }
+    if(count > 0){
+      console.log(candidato);
+    }
+
     candidato.coincidencias = count;
     candidato.infoSk = infoSk;
 
-  });
+  });*/
+
+  //console.log(candidatosConSkill);
 
 
   const ListaCandidatos = candidatos.sort((a, b) => a.coincidencias - b.coincidencias).map((data, i) => {
@@ -85,11 +93,11 @@ export default function UTCandidato(props) {
           primary={data.nombre}
           secondary={
             <Fragment>
-             {data.contrato}
+              {data.contrato}
             </Fragment>
           }
         />
-         <UTLitleShip dataIn={data.infoSk} />
+        <UTLitleShip dataIn={data.skillss} />
 
         <Divider variant="middle" />
         <ListItemSecondaryAction>

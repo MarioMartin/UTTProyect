@@ -43,9 +43,8 @@ export default function UTSelect({ onChange }) {
           id: 'age-simple',
         }}
       >
-        <MenuItem value={'Baja'}>Baja</MenuItem>
-        <MenuItem value={'Media'}>Media</MenuItem>
-        <MenuItem value={'Alta'}>Alta</MenuItem>
+        <MenuItem value={'Iniciada'}>Iniciada</MenuItem>
+        <MenuItem value={'Finalizada'}>Finalizada</MenuItem>
       </Select>
     </FormControl>
   );

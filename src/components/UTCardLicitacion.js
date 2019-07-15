@@ -10,7 +10,8 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import Divider from '@material-ui/core/Divider';
 import UTSChip from './UTShip';
 import { Link } from 'react-router-dom';
-
+import IconButton from '@material-ui/core/IconButton';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -60,7 +61,7 @@ export default function UTCardLicitacion(props) {
         <Typography variant="button"  >
           <Box fontSize="h6.fontSize" > {props.data.nombre}</Box>
         </Typography>
-        <Typography  gutterBottom>
+        <Typography gutterBottom>
           {props.data.descripcion}
         </Typography>
         <Divider variant="middle" />
@@ -72,7 +73,7 @@ export default function UTCardLicitacion(props) {
       <CardContent>
         <Box display="flex"  >
           <Box flexGrow={1} >
-            <Typography  color="textPrimary" component="p">
+            <Typography color="textPrimary" component="p">
 
             </Typography>
           </Box>
@@ -86,20 +87,29 @@ export default function UTCardLicitacion(props) {
             <UTSChip data={props.data.skills} />
           </Box>
           <Box >
-            <Typography  color="textPrimary" component="p">
+            <Typography color="textPrimary" component="p">
               Responsable : {props.data.responsable}
             </Typography>
           </Box>
         </Box>
-        
-      </CardContent>
-      <CardActions className={classes.footer}>
 
-      <Link to={{ pathname: '/consultaLicitacion', state: {data: props.data}}}>
-          <button type="button" className="btn btn-dark"> Buscar Candidato</button>
-        </Link>
-       
-      </CardActions>
+      </CardContent>
+      <CardContent className={classes.footer}>
+        <Box display="flex"  >
+          <Box flexGrow={1} >
+            <IconButton aria-label="Add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+          </Box>
+          <Box >
+            <Link to={{ pathname: '/consultaLicitacion', state: { data: props.data } }}>
+              <button type="button" className="btn btn-dark"> Buscar Candidato</button>
+            </Link>
+          </Box>
+        </Box>
+
+      </CardContent>
+  
 
     </Card>
   );
