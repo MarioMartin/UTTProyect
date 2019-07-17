@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import Box from '@material-ui/core/Box';
@@ -103,7 +102,7 @@ export default function UTCardLicitacion(props) {
           </Box>
           <Box >
             <Link to={{ pathname: '/consultaLicitacion', state: { data: props.data } }}>
-              <button type="button" className="btn btn-dark"> Buscar Candidato</button>
+              <button type="button" className="btn btn-dark"> BUSCAR CANDIDATOS</button>
             </Link>
           </Box>
         </Box>

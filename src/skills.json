@@ -1,3 +1,34 @@
 {
-    "skills": ["SQL","Java","DB2",".NET","Cobol","Javascript","Sharepoint" ]
+    "skills": [
+        "SQL",
+        "Java",
+        "DB2",".NET",
+        "Cobol",
+        "Javascript",
+        "Sharepoint" ,
+        "React.JS",
+        "Angular.JS",
+        "Pyton",
+        "Azure",
+        "Oracle",
+        "Windows DNA",
+        "ASP",
+        "PHP",
+        "Framework.NET",
+        "Banking - Financial Services",
+        "Agile development",
+        "Cobol BATCH",
+        "Oracle",
+        "Cobol CICS ",
+        "UX - UI - VD ",
+        "Visual Design and Patterns",
+        "Watson",
+        "Machine Learning",
+        "Complex Program Delivery",
+        "Credit",
+        "BPM",
+        "IBM Business Automation Workflow - BAW",
+        "Fabrica desarrollo BPM"
+    ]
 }
+

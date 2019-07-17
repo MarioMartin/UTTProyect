@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { colaboradores } from '../colaboradores.json';
 import UTTarjeta from '../components/UTTarjeta';
-import UTBuscador from '../components/UTBuscador';
-
+import UTBuscador from '../components/UTBuscador.jsx';
 
 class ConsultaSkill extends Component {
 
   constructor() {
     super();
     this.state = {
-      colaboradores: colaboradores,
+      colaboradoress: colaboradores,
       termino: "",
     }
   }
@@ -23,28 +22,36 @@ class ConsultaSkill extends Component {
   }
 
   getBusqueda = (termino) => {
-    console.log("obtendra datos con :" + termino);
 
-    this.setState({ termino }, () => {
-      this.consultaAPI();
-    });
+    let colaboradores = this.state.colaboradoress;
+
+    const seleccionados = colaboradores.filter((e, i) => {
+      return e.skills.filter((b, y) => {
+        return b.Skill.toUpperCase() == termino.toUpperCase();
+      }).length;
+    })
+
+    this.setState({ colaboradoress: seleccionados });
   }
 
-
+  resetBusqueda = () => {
+    this.setState({ colaboradoress: colaboradores });
+  }
 
   render() {
     return (
       <div className="container">
-        <div className="row mt-4">
-          <div className="col-md-12 bg-color-dark">
-            <UTBuscador getBusqueda={this.getBusqueda} />
+        <div className="row" style={{ height:150}}>
+          <div className="col-md-12 mt-5 ">
+            <UTBuscador getBusqueda={this.getBusqueda} getLimpiar={this.resetBusqueda} />
           </div>
+        
         </div>
 
         <div className="row ">
           <div className="col-md-12 ">
             <div className="row">
-              <UTTarjeta colaboradores={colaboradores} />
+              <UTTarjeta colaboradores={this.state.colaboradoress} />
             </div>
           </div>
         </div>

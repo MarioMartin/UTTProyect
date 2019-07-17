@@ -12,23 +12,40 @@ const useStyles = makeStyles(theme => ({
     chip: {
         margin: theme.spacing(0),
     },
+    avatar: {
+        margin: 0,
+        width: 20,
+        height: 22,
+        backgroundColor:'#460073',
+        fontSize:12
+    },
 }));
 
 export default function UTLitleShip(props) {
     const classes = useStyles();
 
-    console.log(props.dataIn);
 
-    const minichips = props.dataIn.map((dato, i) => (
-        <Chip
+    const seleccionados = props.dataIn.filter((e, i) => {
+        return e.tiene === 1;
+    })
+
+
+    const minichips = seleccionados.map((dato, i) => (
+
+        <Chip style={{backgroundColor:'#A100FF'}}
             key={i}
+            avatar={
+                <Avatar className={classes.avatar}>
+
+                    {dato.level}
+
+                </Avatar>}
             size="small"
-            avatar={<Avatar>{dato.level}</Avatar>}
-            label={dato.skill}
-            color={(dato.tiene) ? "secondary" : "secondary"}
+            label={dato.Skill}
+            color={(dato.tiene) ? "secondary" : "default"}
             className={classes.chip}
         />
-    )).reverse()
+    ))
 
 
     return (

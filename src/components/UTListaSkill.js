@@ -17,13 +17,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function UTListaSkill(props) {
     const classes = useStyles();
-
     const lista = props.skills.map((data, i) => (
         <ListItem button key={i}>
             <ListItemIcon>
                 <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary={data} />
+            <ListItemText primary={data.Skill} />
         </ListItem>
     ));
 

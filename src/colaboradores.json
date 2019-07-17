@@ -1,35 +1,512 @@
 {
     "colaboradores": [
         {
-            "nombre": "Mario Hernandez",
+            "nombre": "Mario Hernandez Caceres",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=1105580&dt=&dt=1563343810025",
             "contrato": "BECH",
-            "descripcion": "Trabaja hace 5 años en accenture se ha desempeñado en distintas ....",
-            "CareerLevel": "Analista",
-            "skillss": [
+            "descripcion": "Full Stack Developer",
+            "careerLevel": "11 - Analyst",
+            "skills": [
                 {
-                    "skill": "SQL",
+                    "Skill": "SQL",
                     "level": 1
                 },
                 {
-                    "skill": "Java",
+                    "Skill": "Java",
+                    "level": 5
+                },
+				{
+                    "Skill": "React.JS",
+                    "level": 4
+                },
+				{
+                    "Skill": "Angular.JS",
+                    "level": 6
+                },
+				{
+                    "Skill": "Pyton.JS",
+                    "level": 5
+                },
+				{
+                    "Skill": "Azure",
                     "level": 5
                 }
             ]
         },
         {
             "nombre": "Fabian Aburto",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=479250&dt=&dt=1563344192328",
             "contrato": "BECH",
-            "descripcion": "Pieza estrategica del contrato Bech, tambien es llamado 'El arma secreta'",
-            "CareerLevel": "Analista",
-            "skillss": [
+            "descripcion": "Scrum Master - Lider de Equipo",
+            "careerLevel": "9 - Consultant",
+            "skills": [
                 {
-                    "skill": "SQL",
+                    "Skill": "Cobol",
+                    "level": 4
+                },
+                {
+                    "Skill": "Oracle",
+                    "level": 5
+                },
+				{
+                    "Skill": "Windows DNA",
+                    "level": 5
+                },
+				{
+                    "Skill": "ASP",
+                    "level": 3
+                },
+				{
+                    "Skill": "PHP",
+                    "level": 3
+                },
+				{
+                    "Skill": "Framework.NET",
+                    "level": 7
+                },
+				{
+                    "Skill": "Azure",
+                    "level": 3
+                },
+				{
+                    "Skill": "SQL",
+                    "level": 7
+                },
+                {
+                    "Skill": "Java",
+                    "level": 1
+                },
+				{
+                    "Skill": "Banking - Financial Services",
+                    "level": 5
+                },
+				{
+                    "Skill": "Agile development",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Aybén Cardenas del Nido",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=5624&dt=&dt=1563344253055",
+            "contrato": "BECH",
+            "descripcion": "Manager. Responsable del Servicio para el Banco Estado",
+            "careerLevel": "7 - Manager",
+            "skills": [
+                {
+                    "Skill": "Cobol BATCH",
+                    "level": 5
+                },
+                {
+                    "Skill": "Oracle",
+                    "level": 3
+                },
+				{
+                    "Skill": "Windows DNA",
+                    "level": 1
+                },
+				{
+                    "Skill": "SQL",
                     "level": 1
                 },
                 {
-                    "skill": "Java",
+                    "Skill": "Banking - Financial Services",
+                    "level": 5
+                },
+				{
+                    "Skill": "Agile development",
                     "level": 5
                 }
+            ]
+        },
+		{
+            "nombre": "Fernando Aldunce",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=379109&dt=&dt=1563344320748",
+            "contrato": "BECH",
+            "descripcion": "Pieza estrategica del Proyect Bech, tambien es llamado 'El arma secreta'",
+            "careerLevel": "9 - Consultant",
+            "skills": [
+                {
+                    "Skill": "Cobol CICS",
+                    "level": 1
+                },
+               	{
+                    "Skill": "Cobol BATCH",
+                    "level": 5
+                },
+                {
+                    "Skill": "Oracle",
+                    "level": 3
+                },
+				{
+                    "Skill": "Windows DNA",
+                    "level": 1
+                },
+				{
+                    "Skill": "SQL",
+                    "level": 1
+                },
+                {
+                    "Skill": "Banking - Financial Services",
+                    "level": 5
+                },
+				{
+                    "Skill": "Agile development",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Kelly Uribarri",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=1498703&dt=&dt=1563344369021",
+            "contrato": "NewIT",
+            "descripcion": "Digital Design Services",
+            "careerLevel": "13 - Associate",
+            "skills": [
+                {
+                    "Skill": "UX - UI - VD",
+                    "level": 1
+                },
+                {
+                    "Skill": "Visual Design and Patterns",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Sebastian Puño Carreño",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=1569678&dt=&dt=1563344480971",
+            "contrato": "Transbank",
+            "descripcion": "Analista Sr en análisis y desarrollo de aplicaciones en plataforma abierta. Jefe de Equipo",
+            "careerLevel": "10 - Analyst Sr.",
+            "skills": [
+               	{
+                    "Skill": "Windows DNA",
+                    "level": 5
+                },
+				{
+                    "Skill": "ASP",
+                    "level": 5
+                },
+				{
+                    "Skill": "Azure",
+                    "level": 5
+                },
+				{
+                    "Skill": "SQL",
+                    "level": 1
+                },
+                {
+                    "Skill": "Java",
+                    "level": 5
+                },
+				{
+                    "Skill": "Banking - Financial Services",
+                    "level": 5
+                },
+				{
+                    "Skill": "Agile development",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "René Sandoval Emparan",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=806572&dt=&dt=1563344531319",
+            "contrato": "ITAU",
+            "descripcion": "Scrum Master - Celulas Mobile Itau",
+            "careerLevel": "10 - Analyst Sr.",
+            "skills": [
+                {
+                    "Skill": "Windows DNA",
+                    "level": 5
+                },
+				{
+                    "Skill": "ASP",
+                    "level": 5
+                },
+				{
+                    "Skill": "Azure",
+                    "level": 5
+                },
+				{
+                    "Skill": "SQL",
+                    "level": 1
+                },
+                {
+                    "Skill": "Java",
+                    "level": 5
+                },
+				{
+                    "Skill": "Banking - Financial Services",
+                    "level": 5
+                },
+				{
+                    "Skill": "Agile development",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Erica Cecilia Veloce",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=218094&dt=&dt=1563344596773",
+            "contrato": "SALESFORCE",
+            "descripcion": "Lead the effort to design, build and configure applications, acting as the primary point of contact.",
+            "careerLevel": "7 - Manager",
+            "skills": [
+                {
+                    "Skill": "Banking - Financial Services",
+                    "level": 5
+                },
+				{
+                    "Skill": "Agile development",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Nicolas Fuentes Meneses",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=1052759&dt=&dt=1563345128045",
+            "contrato": "BCH",
+            "descripcion": "Desarrollador de aplicaciones .NET",
+            "careerLevel": "11 - Analyst",
+            "skills": [
+                {
+                    "Skill": "Framework .NET",
+                    "level": 1
+                },
+                {
+                    "Skill": "Oracle",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Leandro Suazo Martínez",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=467658&dt=&dt=1563344677555",
+            "contrato": "Banco Security",
+            "descripcion": "Jefe de proyecto, seguimiento de compromisos, riesgos y problemas. lider funcional del proyecto.",
+            "careerLevel": "10 - Analyst Sr.",
+            "skills": [
+                {
+                    "Skill": "Cobol",
+                    "level": 1
+                },
+                {
+                    "Skill": "Oracle",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Sebastián Alvarez Muñoz",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=764023&dt=&dt=1563344722380",
+            "contrato": "NewIT",
+            "descripcion": "Scrum Master del equipo New IT y participo activamente de los procesos creativos del equipo.",
+            "careerLevel": "10 - Analyst Sr.",
+            "skills": [
+                {
+                    "Skill": "SQL",
+                    "level": 1
+                },
+                {
+                    "Skill": "Java",
+                    "level": 5
+                },
+				{
+                    "Skill": "React.JS",
+                    "level": 5
+                },
+				{
+                    "Skill": "Angular.JS",
+                    "level": 5
+                },
+				{
+                    "Skill": "Pyton.JS",
+                    "level": 5
+                },
+				{
+                    "Skill": "Azure",
+                    "level": 5
+                },
+				{
+                    "Skill": "Watson",
+                    "level": 5
+                },
+				{
+                    "Skill": "Machine Learning",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Valeria Novoa Moreno",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=1547436&dt=&dt=1563344778156",
+            "contrato": "CGE",
+            "descripcion": "Jefe de Proyecto - Lider Funcional y Tecnico",
+            "careerLevel": "10 - Analyst Sr.",
+            "skills": [
+                {
+                    "Skill": "Framework .NET",
+                    "level": 1
+                },
+                {
+                    "Skill": "Oracle",
+                    "level": 5
+                },
+				 {
+                    "Skill": "SQL",
+                    "level": 1
+                },
+                {
+                    "Skill": "Java",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Pedro Audero",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=84808&dt=&dt=1563344839047",
+            "contrato": "NewIT",
+            "descripcion": "Design, develop, and configure software systems to meet market and client requirements either end-to-end from analysis, design, implementation, quality assurance, including testing, to delivery and maintenance of the software product or system or for a specific phase of the lifecycle.",
+            "careerLevel": "7 - Manager",
+            "skills": [
+                {
+                    "Skill": "SQL",
+                    "level": 1
+                },
+                {
+                    "Skill": "Java",
+                    "level": 5
+                },
+				{
+                    "Skill": "React.JS",
+                    "level": 5
+                },
+				{
+                    "Skill": "Angular.JS",
+                    "level": 5
+                },
+				{
+                    "Skill": "Pyton",
+                    "level": 5
+                },
+				{
+                    "Skill": "Azure",
+                    "level": 5
+                },
+				{
+                    "Skill": "Watson",
+                    "level": 5
+                },
+				{
+                    "Skill": "Machine Learning",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Felipe Barros Tapia",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=618677&dt=&dt=1563344883828",
+            "contrato": "Transbank",
+            "descripcion": " System Specialist Analyze, design, code and test multiple components of application code across one or more clients. Perform maintenance, enhancements and/or development work.",
+            "careerLevel": "10 - Analyst Sr.",
+            "skills": [
+                {
+                    "Skill": "Cobol",
+                    "level": 1
+                },
+                {
+                    "Skill": "Oracle",
+                    "level": 5
+                },
+				{
+                    "Skill": "Framework .NET",
+                    "level": 1
+                },
+                {
+                    "Skill": "Oracle",
+                    "level": 5
+                },
+				 {
+                    "Skill": "SQL",
+                    "level": 1
+                },
+                {
+                    "Skill": "Java",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Carlos Muñoz Rubilar",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=318281&dt=&dt=1563344926640",
+            "contrato": "Transbank",
+            "descripcion": "Analista Sr, Scrum Master",
+            "careerLevel": "10 - Analyst Sr.",
+            "skills": [
+                {
+                    "Skill": "Windows DNA",
+                    "level": 5
+                },
+				{
+                    "Skill": "ASP",
+                    "level": 5
+                },
+				{
+                    "Skill": "Azure",
+                    "level": 5
+                },
+				{
+                    "Skill": "SQL",
+                    "level": 1
+                },
+                {
+                    "Skill": "Java",
+                    "level": 5
+                },
+				{
+                    "Skill": "Banking - Financial Services",
+                    "level": 5
+                },
+				{
+                    "Skill": "Agile development",
+                    "level": 5
+                }
+            ]
+        },
+		{
+            "nombre": "Julieta Biondo",
+            "foto":"https://people.accenture.com/misc/PhotoProvider.ashx?pk=909325&dt=&dt=1563345046380",
+            "contrato": "BCH- Canales",
+            "descripcion": "Analyze, design, code and test multiple components of application code across one or more clients. Perform maintenance, enhancements and/or development work.",
+            "careerLevel": "Technology Delivery Lead Manager",
+            "skills": [
+                {
+                    "Skill": "Banking",
+                    "level": 6
+                },
+                {
+                    "Skill": "Complex Program Delivery",
+                    "level": 5
+                },
+				{
+                    "Skill": "Credit",
+                    "level": 5
+                },
+				{
+                    "Skill": "BPM",
+                    "level": 6
+                },
+				{
+                    "Skill": "IBM Business Automation Workflow - BAW",
+                    "level": 6
+                },
+				{
+                    "Skill": "Fabrica desarrollo BPM",
+                    "level": 6
+                }
+				
             ]
         }
     ]

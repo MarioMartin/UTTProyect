@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
 import UTTextFields from './UTTextFields';
 import UTDatePicker from './UTDatePicker';
 import UTMultiSelect from './UTMultiSelect';
@@ -126,9 +125,8 @@ class Formulario extends Component {
 
                     </div>
 
-                    <Button type="submit" variant="contained" color="primary">
-                        Guardar
-                    </Button>
+                   
+                    <button type="submit" className="btn btn-dark"> GUARDAR</button>
 
                 </form>
             </div>

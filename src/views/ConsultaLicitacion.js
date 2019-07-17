@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-import UTMigaja from '../components/UTMigaja';
 import UTCandidato from '../components/UTCandidato';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -20,62 +18,87 @@ class ConsultaLicitacion extends Component {
     };
   }
 
+  handleFinalizar = (candidatos) => {
+
+    const licitacion = this.state.licitacion
+    licitacion.candidatos = candidatos
+    this.setState(licitacion)
+  }
+
   render() {
 
     return (
-      <div className="container bgcolor-Cabecera" >
-        <div className="row ">
-          <div className="col-md-12">
-            <UTMigaja />
+      <>
+        <div className="container bgcolor-Cabecera mt-2 " >
+          <div className="row ">
+            <div className="col-md-9 sm-12">
+              <h2>{this.state.licitacion.SSA}</h2>
+            </div>
+            <div className="col-md-3 sm-12 ">
+              <Typography variant="h6" gutterBottom>
+                {this.state.licitacion.estado}
+              </Typography>
+            </div>
           </div>
-        </div>
-        <div className="row p-1">
-          <div className="col-md-9">
-            <h2>{this.state.licitacion.SSA}</h2>
-          </div>
-          <div className="col-md-3 text-right">
-            <Typography variant="h6" gutterBottom>
-              {this.state.licitacion.estado}
-            </Typography>
 
+          <div className="row p-1">
+            <div className="col-md-12">
+            <h4 style={{color:'#7e57c2'}}>{this.state.licitacion.nombre}</h4>
+             
+            </div>
           </div>
-        </div>
+          <Divider />
+          <div className="row p-1">
+            <div className="col-md-12">
+              <Typography variant="button"  >
+                {this.state.licitacion.descripcion}
+              </Typography>
+            </div>
+          </div>
 
-        <div className="row p-1">
-          <div className="col-md-9">
-            <Typography variant="button"  >
-              {this.state.licitacion.nombre}
-            </Typography>
+          <div className="row p-1">
+            <div className="col-md-6 sm-12">
+              Respuesta : 30-01-2019
+            </div>
+            <div className="col-md-6 sm-12">
+              Creada el  : 01-01-2019
           </div>
-          <div className="col-md-3 text-right">
-            Creada el : 01-01-2019
           </div>
-        </div>
-
-        <div className="row p-1">
-          <div className="col-md-9">
-            <Typography variant="button"  >
+          <Divider />
+          <div className="row mt-2 mb-2 pb-4">
+            <div className="col-md-12">
               <UTSChip data={this.state.licitacion.skills} />
-            </Typography>
+            </div>
           </div>
-          <div className="col-md-3 text-right">
-            Respuesta : 30-01-2019
+        </div >
+
+
+
+        <div className="container bgcolor-Cabecera" >
+          <Divider variant="middle" />
+          <div className="row ">
+            <div className="col-md-12">
+              <div className="row ">
+                <div className="col-md-12">
+                  <UTCandidato data={this.state.licitacion.skills} metodo={this.handleFinalizar} />
+                </div>
+              </div>
+              <div className="row p-4 ">
+                <div className="col-md-12">
+                  <Box display="flex"  >
+                    <Box flexGrow={1} ></Box>
+                    <Box >
+                      <Link to={{ pathname: '/final', state: { data: this.state } }}>
+                        <button type="button" className="btn btn-dark"> FINALIZAR</button>
+                      </Link>
+                    </Box>
+                  </Box>
+                </div>
+              </div>
+            </div >
           </div>
         </div>
-        <Divider variant="middle" />
-        <div className="row ">
-          <div className="col-md-12">
-            <UTCandidato data={this.state.licitacion.skills} />
-          </div>
-        </div>
-        <div className="row p-2 ">
-          <div className="col-md-12">
-            <Link to={{ pathname: '/consultaLicitacion', state: {} }}>
-              <button type="button" className="btn btn-dark"> Buscar Candidato</button>
-            </Link>
-          </div>
-        </div>
-      </div>
+      </>
     );
   }
 }
