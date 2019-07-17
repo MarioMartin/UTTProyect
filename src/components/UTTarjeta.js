@@ -61,7 +61,7 @@ export default function UTTarjeta(props) {
                         className={classes.media}
                         //image={foto}
                         //image={data.foto}
-                        image={(data.nombre)?require("../images/"+data.nombre+".jpg"):foto }
+                        image={require("../images/"+data.foto+".jpg")}
                         
                         title="Paella dish"
                     />

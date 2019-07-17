@@ -48,6 +48,11 @@ export default function UTCandidato({ data, metodo }) {
 
   };
 
+  const handler = value => () => {
+   alert();
+
+  };
+
   function UTFiltrar(candidatos) {
 
     const skillsLicitacion = data;
@@ -80,11 +85,11 @@ export default function UTCandidato({ data, metodo }) {
     return (
       <div key={i}>
 
-        <ListItem button>
+        <ListItem button onClick={handler}>
           <ListItemAvatar>
             <Avatar
               alt={`Avatar n°${1}`}
-              src={data.foto}
+              src={require("../images/"+data.foto+".jpg")}
             />
           </ListItemAvatar>
 

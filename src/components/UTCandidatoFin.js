@@ -34,7 +34,7 @@ export default function UTCandidatoFin({data}) {
         <ListItemAvatar>
           <Avatar
             alt={`Avatar n°${1}`}
-            src={data.foto}
+            src={require("../images/"+data.foto+".jpg")}
           />
         </ListItemAvatar>
 
