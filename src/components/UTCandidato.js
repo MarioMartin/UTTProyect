@@ -11,6 +11,8 @@ import Divider from '@material-ui/core/Divider';
 import { colaboradores } from '../colaboradores.json';
 import UTLitleShip from './UTSLitleShip';
 import Typography from '@material-ui/core/Typography';
+import UTModal from './UTModal';
+import Modal from '@material-ui/core/Modal';
 
 
 const useStyles = makeStyles(theme => ({
@@ -25,6 +27,7 @@ export default function UTCandidato({ data, metodo }) {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([1]);
   const [candidatos, setCandidatos] = React.useState(colaboradores);
+  const [seleccionado, setSeleccionado] = React.useState();
 
   //console.log(data);
 
@@ -48,10 +51,7 @@ export default function UTCandidato({ data, metodo }) {
 
   };
 
-  const handler = value => () => {
-   alert();
-
-  };
+  
 
   function UTFiltrar(candidatos) {
 
@@ -81,15 +81,20 @@ export default function UTCandidato({ data, metodo }) {
     return candidatosConSkill
   }
 
+  function handleClick ()  {
+    alert();
+ 
+ 
+   };
+
   const ListaCandidatos = UTFiltrar(candidatos).sort((a, b) => a.coincidencias - b.coincidencias).map((data, i) => {
     return (
       <div key={i}>
-
-        <ListItem button onClick={handler}>
+        <ListItem button onClick={handleClick}>
           <ListItemAvatar>
             <Avatar
               alt={`Avatar n°${1}`}
-              src={require("../images/"+data.foto+".jpg")}
+              src={require("../images/" + data.foto + ".jpg")}
             />
           </ListItemAvatar>
 
@@ -119,12 +124,12 @@ export default function UTCandidato({ data, metodo }) {
           </div>
 
 
-        
+
 
           <Divider variant="middle" />
           <ListItemSecondaryAction>
             <Checkbox
-            color="primary"
+              color="primary"
               edge="end"
               onChange={handleToggle(data)}
               checked={checked.indexOf(data) !== -1}
@@ -133,6 +138,9 @@ export default function UTCandidato({ data, metodo }) {
 
         </ListItem>
         <Divider />
+        <Modal open={false}>
+       
+        </Modal>
       </div>
 
     )

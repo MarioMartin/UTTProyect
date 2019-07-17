@@ -26,6 +26,7 @@ function App() {
             <Route path="/consultaSkill" component={ConsultaSkill} />
             <Route path="/BuscadorLicitacion" component={BuscadorLicitacion} />
             <Route path="/final" component={PantallaFinal} />
+            <Route path="/test" component={Example} />
           </Switch>
         </div>
       </div>
