@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
+import Button from '@material-ui/core/Button';
+import Avatar from '@material-ui/core/Avatar';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -20,8 +22,6 @@ function getModalStyle() {
 const useStyles = makeStyles(theme => ({
   modalWrap: {
     position: "absolute",    
-    width:"80%",
-    left: "10%",
     top: "0",
     paddingTop: "100",
     overflow: "auto",
@@ -38,7 +38,19 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
   },
   modalBody:{
+    width: "100%",
     padding: "2px 16px",
+  },
+  modalFooter:{
+    width: "100%",
+    textAlign: "Right",
+    padding: "0px 10px",
+  },
+  bigAvatar: {
+    margin: 10,
+    width: 60,
+    height: 60,
+    textAlign: "center",
   },
 }));
 
@@ -65,21 +77,31 @@ export default function SimpleModal() {
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
+        aria-finally="simple-modal-footer"
         open={open}
         onClose={handleClose}
       >
         <div style={modalStyle} className={classes.modalWrap}>
           <div id="modal-title" className={classes.modalHeader}>
-            <h4>IMAGEN</h4>
-            <h2>Melanie Suhr</h2>
+            <Avatar alt="mherna" src="../images/m.hernandez.careces.jpg" className={classes.bigAvatar} />
+            <h3>Mario Hernandez Caceres</h3>            
             <hr></hr>
+            <h6>Application Development Analyst</h6>
           </div>
           <div id="simple-modal-description" className={classes.modalBody}>
-            <b>Skills: </b><p>Ships</p>
-            <b>Position: </b><p>Application Development Associate</p>
-            <b>Contacto: </b><p>m.suhr.hernandez</p>
-            <b>Contrato: </b><p>Banco Estado</p>
-            <b>Counselor: </b><p>Fabian Aburto</p>
+            <p>logica para los ships</p>
+            <i class="material-icons">email</i>
+            <b>Contacto: </b><h6>m.hernandez.careces@accenture.com</h6>
+            <i class="material-icons">business</i>
+            <b>Contrato: </b><h6>Banco Estado</h6>
+            <i class="material-icons">contacts</i>
+            <b>Counselor: </b><h6>Fabian Aburto</h6>
+          </div>
+          <div id="simple-modal-finally" className={classes.modalFooter}>
+          <hr></hr>
+            <Button color="Default" onClick={handleClose}>
+              Cerrar
+            </Button>
           </div>
         </div>
       </Modal>

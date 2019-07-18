@@ -7,7 +7,7 @@ import PantallaFinal from './views/Final';
 import Home from './views/Home';
 import UTMenuBarra from './components/UTMenuBarra';
 import BuscadorLicitacion from './views/BuscadorLicitacion';
-
+import Example from './components/example';
 
 
 import './App.css';
@@ -39,11 +39,8 @@ function App() {
             <Route path="/consultaSkill" component={ConsultaSkill} />
             <Route path="/BuscadorLicitacion" component={BuscadorLicitacion} />
             <Route path="/final" component={PantallaFinal} />
-<<<<<<< HEAD
             <Route path="/test" component={Example} />
-=======
-            <Route path="/test" component={Home} />
->>>>>>> bbde72a71091420ea667d0cef8a05a1573d12878
+
           </Switch>
         </div>
       </div>
