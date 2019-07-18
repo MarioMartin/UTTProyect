@@ -16,7 +16,6 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    //maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
   },
 }));
@@ -25,6 +24,8 @@ export default function UTCandidato({ data, metodo }) {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([1]);
   const [candidatos, setCandidatos] = React.useState(colaboradores);
+  const [seleccionado, setSeleccionado] = React.useState();
+  const [open, setOpen] = React.useState(false);
 
   //console.log(data);
 
@@ -48,10 +49,7 @@ export default function UTCandidato({ data, metodo }) {
 
   };
 
-  const handler = value => () => {
-   alert();
 
-  };
 
   function UTFiltrar(candidatos) {
 
@@ -81,15 +79,21 @@ export default function UTCandidato({ data, metodo }) {
     return candidatosConSkill
   }
 
+  function handleClick(data) {
+    setSeleccionado(data)
+    setOpen(true)
+
+
+  };
+
   const ListaCandidatos = UTFiltrar(candidatos).sort((a, b) => a.coincidencias - b.coincidencias).map((data, i) => {
     return (
       <div key={i}>
-
-        <ListItem button onClick={handler}>
+        <ListItem button onClick={handleClick.bind(this, data)}>
           <ListItemAvatar>
             <Avatar
               alt={`Avatar n°${1}`}
-              src={require("../images/"+data.foto+".jpg")}
+              src={require("../images/" + data.foto + ".jpg")}
             />
           </ListItemAvatar>
 
@@ -119,12 +123,12 @@ export default function UTCandidato({ data, metodo }) {
           </div>
 
 
-        
+
 
           <Divider variant="middle" />
           <ListItemSecondaryAction>
             <Checkbox
-            color="primary"
+              color="primary"
               edge="end"
               onChange={handleToggle(data)}
               checked={checked.indexOf(data) !== -1}
@@ -133,14 +137,18 @@ export default function UTCandidato({ data, metodo }) {
 
         </ListItem>
         <Divider />
+      
       </div>
 
     )
   }).reverse()
 
   return (
+    <>
     <List dense className={classes.root}>
       {ListaCandidatos}
     </List>
+     
+    </>
   );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -9,14 +9,11 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import UTListaSkill from './UTListaSkill';
-
-import foto from '.././images/Fabian Aburto.jpg';
 import { Divider } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
     card: {
-        maxWidth: 300,
+        maxWidth: 400,
         marginTop: 20,
     },
     media: {
@@ -40,14 +37,8 @@ const useStyles = makeStyles(theme => ({
 
 export default function UTTarjeta(props) {
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState(false);
-
-    function handleExpandClick() {
-        setExpanded(!expanded);
-    }
 
     const tarjetas = props.colaboradores.map((data, i) => {
-        const fotoo = data.foto;
         return (
             <div className="col-md-4 sm-12" key={i}>
                 <Card className={classes.card}>
@@ -59,29 +50,25 @@ export default function UTTarjeta(props) {
                     />
                     <CardMedia
                         className={classes.media}
-                        //image={foto}
-                        //image={data.foto}
-                        image={require("../images/"+data.foto+".jpg")}
-                        
+                        image={require("../images/" + data.foto + ".jpg")}
                         title="Paella dish"
                     />
                     <CardContent>
                         <Typography variant="body2" color="textSecondary" component="p">
                             {data.descripcion}
                         </Typography>
-                        <Divider/>
-                        <Typography paragraph>Skills:</Typography>
-                        <UTListaSkill skills={data.skills} />
+                        <Divider />
+                        <Typography paragraph>{data.careerLevel}</Typography>
                     </CardContent>
-            
+
                 </Card>
             </div>
         )
     });
 
     return (
-        <>
+        <Fragment>
             {tarjetas}
-        </>
+        </Fragment>
     );
 }
