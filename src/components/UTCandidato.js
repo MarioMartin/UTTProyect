@@ -11,14 +11,11 @@ import Divider from '@material-ui/core/Divider';
 import { colaboradores } from '../colaboradores.json';
 import UTLitleShip from './UTSLitleShip';
 import Typography from '@material-ui/core/Typography';
-import UTModal from './UTModal';
-import Modal from '@material-ui/core/Modal';
 
 
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    //maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
   },
 }));
@@ -28,6 +25,7 @@ export default function UTCandidato({ data, metodo }) {
   const [checked, setChecked] = React.useState([1]);
   const [candidatos, setCandidatos] = React.useState(colaboradores);
   const [seleccionado, setSeleccionado] = React.useState();
+  const [open, setOpen] = React.useState(false);
 
   //console.log(data);
 
@@ -51,7 +49,7 @@ export default function UTCandidato({ data, metodo }) {
 
   };
 
-  
+
 
   function UTFiltrar(candidatos) {
 
@@ -81,16 +79,17 @@ export default function UTCandidato({ data, metodo }) {
     return candidatosConSkill
   }
 
-  function handleClick ()  {
-    alert();
- 
- 
-   };
+  function handleClick(data) {
+    setSeleccionado(data)
+    setOpen(true)
+
+
+  };
 
   const ListaCandidatos = UTFiltrar(candidatos).sort((a, b) => a.coincidencias - b.coincidencias).map((data, i) => {
     return (
       <div key={i}>
-        <ListItem button onClick={handleClick}>
+        <ListItem button onClick={handleClick.bind(this, data)}>
           <ListItemAvatar>
             <Avatar
               alt={`Avatar n°${1}`}
@@ -138,17 +137,18 @@ export default function UTCandidato({ data, metodo }) {
 
         </ListItem>
         <Divider />
-        <Modal open={false}>
-       
-        </Modal>
+      
       </div>
 
     )
   }).reverse()
 
   return (
+    <>
     <List dense className={classes.root}>
       {ListaCandidatos}
     </List>
+     
+    </>
   );
 }

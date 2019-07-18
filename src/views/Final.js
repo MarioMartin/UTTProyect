@@ -6,22 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import UTSChip from '../components/UTShip';
 
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  cabecera: {
-    backgroundColor: '#482880',
-    //border:'1px solid white',
-    color: 'white',
-  }
-}));
-
-
 
 export default function UTFinal(props) {
-  const classes = useStyles();
   const [licitacion, setLicitacion] = React.useState(props.location.state.data);
 
 

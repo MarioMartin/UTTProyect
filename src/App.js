@@ -1,19 +1,32 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
 import ingresoLicitacion from './views/IngresoLicitacion';
 import ConsultaLicitacion from './views/ConsultaLicitacion';
 import ConsultaSkill from './views/ConsultaSkill';
 import PantallaFinal from './views/Final';
+import Home from './views/Home';
 import UTMenuBarra from './components/UTMenuBarra';
 import BuscadorLicitacion from './views/BuscadorLicitacion';
 
-import Example from './components/example';
 
 
 import './App.css';
 
+/*const useStyles = makeStyles(theme => ({
+  root: {
+    display: 'flex',
+    justifyContent: 'left',
+    flexWrap: 'wrap',
+
+  },
+  titulo1: {
+    fontSize: 50,
+  },
+}));*/
+
 function App() {
+
+
   return (
     <Router>
       <div className="App">
@@ -26,7 +39,7 @@ function App() {
             <Route path="/consultaSkill" component={ConsultaSkill} />
             <Route path="/BuscadorLicitacion" component={BuscadorLicitacion} />
             <Route path="/final" component={PantallaFinal} />
-            <Route path="/test" component={Example} />
+            <Route path="/test" component={Home} />
           </Switch>
         </div>
       </div>
@@ -34,11 +47,9 @@ function App() {
   );
 }
 
-const Home = () => (
-  <div className="Home">
-    <h1></h1>
- 
-  </div>
+const HomeTest = () => (
+ <h1>-</h1>
+
 );
 
 export default App;

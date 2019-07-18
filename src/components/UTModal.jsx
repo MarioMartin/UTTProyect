@@ -29,39 +29,30 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function UTModal() {
+export default function UTModal({data}) {
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState();
 
-  const handleOpen = () => {
+ /* const handleOpen = () => {
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
-  };
+  };*/
 
   return (
     <div>
-      <p>Click to get the full Modal experience!</p>
-      <button type="button" onClick={handleOpen}>
-        Open Modal
-      </button>
-      <Modal
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
-        open={open}
-        onClose={handleClose}
-      >
+     
         <div style={modalStyle} className={classes.paper}>
-          <h2 id="modal-title">Text in a modal</h2>
+          <h2 id="modal-title">{data.nombre}</h2>
           <p id="simple-modal-description">
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
           </p>
         </div>
-      </Modal>
+     
     </div>
   );
 }
