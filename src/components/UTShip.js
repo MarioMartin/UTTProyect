@@ -18,6 +18,7 @@ export default function UTSChip(props) {
     const classes = useStyles();
     const [skills, setSkills] = React.useState(props.data);
 
+
     const ListaSkills = skills.map((data, i) => (
         <Chip
             key={i}

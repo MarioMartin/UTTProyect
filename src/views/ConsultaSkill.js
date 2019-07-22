@@ -31,7 +31,7 @@ class ConsultaSkill extends Component {
       }).length;
     })
 
-    this.setState({ colaboradoress: seleccionados });
+    this.setState({ colaboradoress: seleccionados, termino: termino });
   }
 
   resetBusqueda = () => {
@@ -41,11 +41,11 @@ class ConsultaSkill extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row" style={{ height:150}}>
+        <div className="row" style={{ height: 150 }}>
           <div className="col-md-12 mt-5 ">
             <UTBuscador getBusqueda={this.getBusqueda} getLimpiar={this.resetBusqueda} />
           </div>
-        
+
         </div>
 
         <div className="row ">

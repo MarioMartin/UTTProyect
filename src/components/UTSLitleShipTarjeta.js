@@ -16,32 +16,33 @@ const useStyles = makeStyles(theme => ({
         margin: 0,
         width: 20,
         height: 22,
-        backgroundColor:'#460073',
+        //backgroundColor:'#460073',
         fontSize:12
     },
 }));
 
-export default function UTLitleShip(props) {
+export default function UTSLitleShipTarjeta(props) {
     const classes = useStyles();
 
-    const seleccionados = props.dataIn.filter((e, i) => {
+    /*const seleccionados = props.dataIn.filter((e, i) => {
         return e.tiene === 1;
-    })
+    })*/
+   
+
+ 
 
 
-    const minichips = seleccionados.map((dato, i) => (
+    const minichips = props.dataIn.map((dato, i) => (
 
-        <Chip style={{backgroundColor:'#A100FF'}}
+        <Chip //style={{backgroundColor:'#A100FF'}}
             key={i}
             avatar={
                 <Avatar className={classes.avatar}>
-
                     {dato.level}
-
                 </Avatar>}
             size="small"
             label={dato.Skill}
-            color={(dato.tiene) ? "secondary" : "default"}
+            //color={(dato.tiene) ? "secondary" : "default"}
             className={classes.chip}
         />
     ))

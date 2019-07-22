@@ -2,10 +2,12 @@
     "colaboradores": [
         {
             "nombre": "Mario Hernandez Caceres",
-            "foto":"m.hernandez.caceres",
+            "foto": "m.hernandez.caceres",
+            "mail": "m.hernandez.caceres@accenture.com",
             "contrato": "BECH",
-            "descripcion": "Full Stack Developer",
+            "descripcion": "Full Stack Developer - Code and test multiple components of application code across one or more clients. Perform maintenance, enhancements and/or development work.",
             "careerLevel": "11 - Analyst",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "SQL",
@@ -15,19 +17,19 @@
                     "Skill": "Java",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "React.JS",
                     "level": 4
                 },
-				{
+                {
                     "Skill": "Angular.JS",
                     "level": 6
                 },
-				{
+                {
                     "Skill": "Pyton.JS",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Azure",
                     "level": 5
                 }
@@ -35,10 +37,12 @@
         },
         {
             "nombre": "Fabian Aburto",
-            "foto":"Fabian Aburto",
+            "foto": "Fabian Aburto",
+            "mail": "f.aburto.moccia@accenture.com",
             "contrato": "BECH",
-            "descripcion": "Scrum Master - Lider de Equipo",
+            "descripcion": "Scrum Master - Lider de Equipo - Design, develop, and configure software systems to meet market and client requirements either end-to-end from analysis, design, implementation, quality assurance, including testing.",
             "careerLevel": "9 - Consultant",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "Cobol",
@@ -48,27 +52,27 @@
                     "Skill": "Oracle",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Windows DNA",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "ASP",
                     "level": 3
                 },
-				{
+                {
                     "Skill": "PHP",
                     "level": 3
                 },
-				{
+                {
                     "Skill": "Framework.NET",
                     "level": 7
                 },
-				{
+                {
                     "Skill": "Azure",
                     "level": 3
                 },
-				{
+                {
                     "Skill": "SQL",
                     "level": 7
                 },
@@ -76,22 +80,24 @@
                     "Skill": "Java",
                     "level": 1
                 },
-				{
+                {
                     "Skill": "Banking - Financial Services",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Agile development",
                     "level": 5
                 }
             ]
         },
-		{
+        {
             "nombre": "Aybén Cardenas del Nido",
-            "foto":"ayben.cardenas",
+            "foto": "ayben.cardenas",
+            "mail": "a.cardenas.nido@accenture.com",
             "contrato": "BECH",
             "descripcion": "Manager. Responsable del Servicio para el Banco Estado",
             "careerLevel": "7 - Manager",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "Cobol BATCH",
@@ -101,11 +107,11 @@
                     "Skill": "Oracle",
                     "level": 3
                 },
-				{
+                {
                     "Skill": "Windows DNA",
                     "level": 1
                 },
-				{
+                {
                     "Skill": "SQL",
                     "level": 1
                 },
@@ -113,24 +119,26 @@
                     "Skill": "Banking - Financial Services",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Agile development",
                     "level": 5
                 }
             ]
         },
-		{
+        {
             "nombre": "Fernando Aldunce",
-            "foto":"f.aldunce.pacheco",
+            "foto": "f.aldunce.pacheco",
+            "mail": "f.aldunce.pacheco@accenture.com",
             "contrato": "BECH",
-            "descripcion": "Pieza estrategica del Proyect Bech, tambien es llamado 'El arma secreta'",
+            "descripcion": "Lead the effort to design, build and configure applications, acting as the primary point of contact.",
             "careerLevel": "9 - Consultant",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "Cobol CICS",
                     "level": 1
                 },
-               	{
+                {
                     "Skill": "Cobol BATCH",
                     "level": 5
                 },
@@ -138,11 +146,11 @@
                     "Skill": "Oracle",
                     "level": 3
                 },
-				{
+                {
                     "Skill": "Windows DNA",
                     "level": 1
                 },
-				{
+                {
                     "Skill": "SQL",
                     "level": 1
                 },
@@ -150,18 +158,20 @@
                     "Skill": "Banking - Financial Services",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Agile development",
                     "level": 5
                 }
             ]
         },
-		{
+        {
             "nombre": "Kelly Uribarri",
-            "foto":"k.urribarri.boscan",
+            "foto": "k.urribarri.boscan",
+            "mail": "k.urribarri.boscan@accenture.com",
             "contrato": "NewIT",
             "descripcion": "Digital Design Services",
             "careerLevel": "13 - Associate",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "UX - UI - VD",
@@ -173,26 +183,28 @@
                 }
             ]
         },
-		{
+        {
             "nombre": "Sebastian Puño Carreño",
-            "foto":"s.puno.carreno",
+            "foto": "s.puno.carreno",
+            "mail": "s.puno.carreno@accenture.com",
             "contrato": "Transbank",
             "descripcion": "Analista Sr en análisis y desarrollo de aplicaciones en plataforma abierta. Jefe de Equipo",
             "careerLevel": "10 - Analyst Sr.",
+            "ubicacion": "Santiago, Chile",
             "skills": [
-               	{
+                {
                     "Skill": "Windows DNA",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "ASP",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Azure",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "SQL",
                     "level": 1
                 },
@@ -200,36 +212,38 @@
                     "Skill": "Java",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Banking - Financial Services",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Agile development",
                     "level": 5
                 }
             ]
         },
-		{
+        {
             "nombre": "René Sandoval Emparan",
-            "foto":"r.sandoval.emparan",
+            "foto": "r.sandoval.emparan",
+            "mail": "r.sandoval.emparan@accenture.com",
             "contrato": "ITAU",
             "descripcion": "Scrum Master - Celulas Mobile Itau",
             "careerLevel": "10 - Analyst Sr.",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "Windows DNA",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "ASP",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Azure",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "SQL",
                     "level": 1
                 },
@@ -237,39 +251,43 @@
                     "Skill": "Java",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Banking - Financial Services",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Agile development",
                     "level": 5
                 }
             ]
         },
-		{
+        {
             "nombre": "Erica Cecilia Veloce",
-            "foto":"erica.haybron",
+            "foto": "erica.haybron",
             "contrato": "SALESFORCE",
+            "mail": "erica.haybron@accenture.com",
             "descripcion": "Lead the effort to design, build and configure applications, acting as the primary point of contact.",
             "careerLevel": "7 - Manager",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "Banking - Financial Services",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Agile development",
                     "level": 5
                 }
             ]
         },
-		{
+        {
             "nombre": "Nicolas Fuentes Meneses",
-            "foto":"n.fuentes.meneses",
+            "foto": "n.fuentes.meneses",
+            "mail": "n.fuentes.meneses@accenture.com",
             "contrato": "BCH",
             "descripcion": "Desarrollador de aplicaciones .NET",
             "careerLevel": "11 - Analyst",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "Framework .NET",
@@ -281,12 +299,14 @@
                 }
             ]
         },
-		{
+        {
             "nombre": "Leandro Suazo Martínez",
-            "foto":"leandro.h.suazo.mora",
+            "foto": "leandro.h.suazo.mora",
+            "mail": "leandro.h.suazo.mora@accenture.com",
             "contrato": "Banco Security",
             "descripcion": "Jefe de proyecto, seguimiento de compromisos, riesgos y problemas. lider funcional del proyecto.",
             "careerLevel": "10 - Analyst Sr.",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "Cobol",
@@ -298,12 +318,14 @@
                 }
             ]
         },
-		{
+        {
             "nombre": "Sebastián Alvarez Muñoz",
-            "foto":"s.alvarez.munoz",
+            "foto": "s.alvarez.munoz",
+            "mail": "s.alvarez.munoz@accenture.com",
             "contrato": "NewIT",
             "descripcion": "Scrum Master del equipo New IT y participo activamente de los procesos creativos del equipo.",
             "careerLevel": "10 - Analyst Sr.",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "SQL",
@@ -313,38 +335,40 @@
                     "Skill": "Java",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "React.JS",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Angular.JS",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Pyton.JS",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Azure",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Watson",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Machine Learning",
                     "level": 5
                 }
             ]
         },
-		{
+        {
             "nombre": "Valeria Novoa Moreno",
-            "foto":"valeria.novoa.moreno",
+            "foto": "valeria.novoa.moreno",
+            "mail": "valeria.novoa.moreno@accenture.com",
             "contrato": "CGE",
             "descripcion": "Jefe de Proyecto - Lider Funcional y Tecnico",
             "careerLevel": "10 - Analyst Sr.",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "Framework .NET",
@@ -354,7 +378,7 @@
                     "Skill": "Oracle",
                     "level": 5
                 },
-				 {
+                {
                     "Skill": "SQL",
                     "level": 1
                 },
@@ -364,12 +388,14 @@
                 }
             ]
         },
-		{
+        {
             "nombre": "Pedro Audero",
-            "foto":"pedro.audero",
+            "foto": "pedro.audero",
+            "mail": "pedro.audero@accenture.com",
             "contrato": "NewIT",
-            "descripcion": "Design, develop, and configure software systems to meet market and client requirements either end-to-end from analysis, design, implementation, quality assurance, including testing, to delivery and maintenance of the software product or system or for a specific phase of the lifecycle.",
+            "descripcion": "Design, develop, and configure software systems to meet market and client requirements either end-to-end from analysis, design, implementation, quality assurance, including testing.",
             "careerLevel": "7 - Manager",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "SQL",
@@ -379,38 +405,40 @@
                     "Skill": "Java",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "React.JS",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Angular.JS",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Pyton",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Azure",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Watson",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Machine Learning",
                     "level": 5
                 }
             ]
         },
-		{
+        {
             "nombre": "Felipe Barros Tapia",
-            "foto":"felipe.barros.tapia",
+            "foto": "felipe.barros.tapia",
+            "mail": "felipe.barros.tapia@accenture.com",
             "contrato": "Transbank",
             "descripcion": " System Specialist Analyze, design, code and test multiple components of application code across one or more clients. Perform maintenance, enhancements and/or development work.",
             "careerLevel": "10 - Analyst Sr.",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "Cobol",
@@ -420,7 +448,7 @@
                     "Skill": "Oracle",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Framework .NET",
                     "level": 1
                 },
@@ -428,7 +456,7 @@
                     "Skill": "Oracle",
                     "level": 5
                 },
-				 {
+                {
                     "Skill": "SQL",
                     "level": 1
                 },
@@ -438,26 +466,28 @@
                 }
             ]
         },
-		{
+        {
             "nombre": "Carlos Muñoz Rubilar",
-            "foto":"carlos.munoz.rubilar",
+            "foto": "carlos.munoz.rubilar",
+            "mail": "carlos.munoz.rubilar@accenture.com",
             "contrato": "Transbank",
             "descripcion": "Analista Sr, Scrum Master",
             "careerLevel": "10 - Analyst Sr.",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "Windows DNA",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "ASP",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Azure",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "SQL",
                     "level": 1
                 },
@@ -465,22 +495,24 @@
                     "Skill": "Java",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Banking - Financial Services",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Agile development",
                     "level": 5
                 }
             ]
         },
-		{
+        {
             "nombre": "Julieta Biondo",
-            "foto":"julieta.biondo",
+            "foto": "julieta.biondo",
+            "mail": "julieta.biondo@accenture.com",
             "contrato": "BCH- Canales",
             "descripcion": "Analyze, design, code and test multiple components of application code across one or more clients. Perform maintenance, enhancements and/or development work.",
             "careerLevel": "Technology Delivery Lead Manager",
+            "ubicacion": "Santiago, Chile",
             "skills": [
                 {
                     "Skill": "Banking",
@@ -490,23 +522,22 @@
                     "Skill": "Complex Program Delivery",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "Credit",
                     "level": 5
                 },
-				{
+                {
                     "Skill": "BPM",
                     "level": 6
                 },
-				{
-                    "Skill": "IBM Business Automation Workflow - BAW",
+                {
+                    "Skill": "IBM BAW",
                     "level": 6
                 },
-				{
+                {
                     "Skill": "Fabrica desarrollo BPM",
                     "level": 6
                 }
-				
             ]
         }
     ]

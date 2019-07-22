@@ -20,14 +20,16 @@ export default function UTCandidatoFin({data}) {
   const [candidatos, setCandidatos] = React.useState(data);
 
   
-  candidatos.splice(0,1)
+    candidatos.splice(0,1)
+  
+  
  
 
   useEffect(() => {
 
 
   })
-
+console.log("gggggggg");
   const ListaCandidatos = candidatos.map((data, i) => {
     return (
       <ListItem key={i} button>

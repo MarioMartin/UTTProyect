@@ -32,7 +32,6 @@ class Formulario extends Component {
 
         if (e.target) {
             const { value, name } = e.target;
-            console.log("e.target.value");
             this.setState({
                 [name]: value
             });

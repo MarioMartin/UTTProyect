@@ -21,6 +21,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import logo from '../images/accLogo.PNG';
+import logoBlanco from '../images/accLogoBlanco.png';
 
 
 
@@ -77,6 +78,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
+    //backgroundColor:'transparent',
   },
 }));
 
@@ -231,7 +233,7 @@ export default function UTMenuBarra() {
             </IconButton>
             <img
               className={classes.img}
-              src={logo}
+              src={logoBlanco}
               alt="logo"
             />
 

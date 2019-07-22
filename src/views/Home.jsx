@@ -78,7 +78,7 @@ export default function Home() {
                     <div className="row">
                         <div className="col-md-12 text-center " >
                             <Hidden smDown>
-                                <h1 class="font-weight-bold" className={classes.titulo1}>ULTIMATE</h1>
+                                <h1 className="font-weight-bold" className={classes.titulo1}>ULTIMATE</h1>
                             </Hidden>
                             <Hidden only="lg">
                                 <h1 className="font-weight-bold" className={classes.titulo1B}>ULTIMATE</h1>
@@ -97,7 +97,7 @@ export default function Home() {
                         <div className="col-md-6 sm-12 text-center" >
 
                             <Hidden smDown>
-                                <Typography variant="h1" className={classes.titulo3}> |</Typography>
+                                <Typography variant="h1" className={classes.titulo3}> </Typography>
                             </Hidden>
                         </div>
                     </div>
@@ -119,8 +119,8 @@ export default function Home() {
                     <div className="card" style={{ width: '18rem', }}>
                         <img src={require("../images/people.jpg")} className="card-img-top" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">Una caracteristica</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 className="card-title">Traza tu camino</h5>
+                            <p className="card-text"> Te ayudaremos a encontrar el camino correcto para tu carrera a través de nuestra amplia gama de oportunidades. Tendrás la oportunidad de trabajar en una amplia gama de industrias con algunas de las organizaciones más influyentes del mundo.</p>
 
                         </div>
                     </div>
@@ -129,8 +129,8 @@ export default function Home() {
                     <div className="card" style={{ width: '18rem', }}>
                         <img src={require("../images/people2.jpg")} className="card-img-top" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">Otra caracteristica</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 className="card-title">Haz la diferencia a tu manera</h5>
+                            <p className="card-text">Trabaja en un lugar donde te sientas inspirado a explorar tus pasiones; donde nutras y cultives tus talentos; donde puedas innovar con tecnología de vanguardia en los proyectos más increíbles que puedas imaginar.</p>
 
                         </div>
                     </div>
@@ -139,8 +139,8 @@ export default function Home() {
                     <div className="card" style={{ width: '18rem', }}>
                         <img src={require("../images/people3.jpg")} className="card-img-top" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">Una caracteristica mas  </h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 className="card-title">Ayúdanos a cambiar el mundo  </h5>
+                            <p className="card-text">Tendrás a tu disposición las herramientas que necesites para seguir creciendo y liderando el cambio en el mundo.</p>
            
                         </div>
                     </div>
