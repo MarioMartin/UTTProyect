@@ -1,5 +1,7 @@
 
 body {
+
+    font-family: "Graphik Black","Arial Black",Sans-Serif;
     /* Ubicación de la imagen */
     background-image: url(images/fondo1.jpg);
     
@@ -18,6 +20,7 @@ body {
     /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
     background-color: #6441A5;   
 }
+
 
 /*body {
     margin: 0;

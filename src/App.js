@@ -35,8 +35,8 @@ function App() {
   );
 }
 
-const HomeTest = () => (
- <h1>-</h1>
+const Example = () => (
+ <h1>ejemplo</h1>
 
 );
 
