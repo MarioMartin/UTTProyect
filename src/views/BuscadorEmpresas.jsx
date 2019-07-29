@@ -10,15 +10,16 @@ export default function BuscadorEmpresas() {
         <Fragment>
             <div className="container">
                 <div className="row">
+                <br/>
                     <div className="col-md-12">
-
-                    </div>
+                    </div>  
                     <div className="col-md-6">
                         <UTTarjetaEmpresa />
                     </div>
                     <div className="col-md-6">
                         <UTTarjetaEmpresa />
                     </div>
+                                      
                 </div>
             </div>
         </Fragment>

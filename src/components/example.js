@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
+import Grid from '@material-ui/core/Grid';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -50,7 +51,6 @@ const useStyles = makeStyles(theme => ({
     margin: 10,
     width: 60,
     height: 60,
-    textAlign: "center",
   },
 }));
 
@@ -83,7 +83,9 @@ export default function SimpleModal() {
       >
         <div style={modalStyle} className={classes.modalWrap}>
           <div id="modal-title" className={classes.modalHeader}>
+          <Grid container justify="center" alignItems="center">
             <Avatar alt="mherna" src="../images/m.hernandez.careces.jpg" className={classes.bigAvatar} />
+          </Grid>
             <h3>Mario Hernandez Caceres</h3>            
             <hr></hr>
             <h6>Application Development Analyst</h6>
