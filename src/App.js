@@ -10,6 +10,7 @@ import ConsultaSkill from './views/ConsultaSkill';
 import PantallaFinal from './views/Final';
 import BuscadorLicitacion from './views/BuscadorLicitacion';
 import BuscadorEmpresas from './views/BuscadorEmpresas';
+import UTBuscadorPersonas from './components/buscadores/UTBuscadorEmpresas';
 
 import './App.css';
 
@@ -36,7 +37,7 @@ function App() {
 }
 
 const Example = () => (
- <h1>ejemplo</h1>
+ <UTBuscadorPersonas />
 
 );
 
