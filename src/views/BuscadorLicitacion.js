@@ -77,9 +77,7 @@ class BusadorLicitacion extends Component {
           <div className="col-md-12 mt-5 ">
             <UTBuscador getBusqueda={this.getBusqueda} getLimpiar={this.resetBusqueda} />
           </div>
-        
         </div>
-
         <div className="row ">
           <div className="col-md-12 ">
            

@@ -1,308 +1,178 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-import Container from '@material-ui/core/Container';
-
-import clsx from 'clsx';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
+
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
-import Chip from '@material-ui/core/Chip';
-import CheckIcon from '@material-ui/icons/Check';
 import { Divider, Icon } from '@material-ui/core';
 
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
+
+import IconButton from '@material-ui/core/IconButton';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
+import Fab from '@material-ui/core/Fab';
+
+import UbicacionIcon from '@material-ui/icons/WhereToVote';
+import WorkIcon from '@material-ui/icons/Work';
+import WebIcon from '@material-ui/icons/NearMe';
+
+import logoAcce from '../../images/logos/logo-Accenture.png';
+
+import logoFace from '../../images/logos/social/icons8-facebook.png';
+import logoInta from '../../images/logos/social/icons8-instagram.png';
+import logoLink from '../../images/logos/social/icons8-linkedin.png';
+import logoYout from '../../images/logos/social/icons8-youtube.png';
+
+import boss1 from '../../images/ayben.cardenas.jpg';
+import boss2 from '../../images/agustin.alcaide.jpg';
+
+import Rating from 'material-ui-rating'
+
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        width: '100%',
-      },
-      heading: {
-        fontSize: theme.typography.pxToRem(15),
-      },
-      icon: {
-        verticalAlign: 'bottom',
-        height: 50,
-        width: 50,
-      },
-      details: {
-          display: 'flex',
-        alignItems: 'center',
-      },
-      column: {        
-        display: 'flex',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-      },
-      helper: {
-        borderLeft: `2px solid ${theme.palette.divider}`,
-        padding: theme.spacing(1, 2),
-      },
-      link: {
-        color: theme.palette.primary.main,
-        textDecoration: 'none',
-        '&:hover': {
-          textDecoration: 'underline',
-        },
-      },
-      cabecera: {
-        height: 60,
-        backgroundColor: '#a100ff',
-        color: 'white',
-      },
-      chip: {
-        margin: theme.spacing(1),
-      },
-      contenedorChip: {
-        display: 'flex',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-      },
-      items: {
-        verticalAlign: 'middle',
-      },
-      table: {
-        minWidth: 700,
-      },
-      paper: {
-        width: '100%',
-        marginTop: theme.spacing(3),
-        overflowX: 'auto',
-      },
+  cabecera: {
+    height: 60,
+    backgroundColor: '#FF9800',
+    color: 'white',
+  },
+  logo: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 0,
+  },
+  ContentLogo: {
+    border: '1px solid gray',
+    padding: 10,
+
+  },
+  avSocial: {
+    width: 30,
+    height: 30,
+    [theme.breakpoints.down('sm')]: {
+      width: 60,
+      height: 60,
+
+    },
+    /* '&:hover': {
+       width: 35,
+       height: 35,
+     },*/
+
+  },
+  AvatarBoss: {
+    margin: 5,
+    width: 80,
+    height: 80,
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 10,
+      width: 100,
+      height: 100,
+    }
+  },
+  grid: {
+    [theme.breakpoints.down('sm')]: {
+      Justify: "center",
+      justifyContent: "center",
+    }
+  },
+  fab: {
+    width: 30,
+    height: 30,
+    backgroundColor: 'transparent',
+    [theme.breakpoints.down('sm')]: {
+      width: 60,
+      height: 60,
+    }
+  },
 }));
 
-const StyledTableCell = withStyles(theme => ({
-    head: {
-      backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white,
-    },
-    body: {
-      fontSize: 14,
-    },
-  }))(TableCell);
-  
-  const StyledTableRow = withStyles(theme => ({
-    root: {
-      '&:nth-of-type(odd)': {
-        backgroundColor: theme.palette.background.default,
-      },
-    },
-  }))(TableRow);
-function dataEjemplo(iniciativa, descripcion, responsableB, estado, calificacion) {
-    return { iniciativa, descripcion, responsableB, estado, calificacion };
-  }
-  
-  const rows = [
-    dataEjemplo('PYT-5103', 'Modificaciones Corfo', 'Eugenio Castillo', 'Finalizada', 'Estrellitas'),
-    dataEjemplo('Cat. 14567', 'Implementación Tablero Gestión MUS', 'Luis Moreno', 'En Curso', 4.3),
-    dataEjemplo('MAY-1213', 262, 16.0, 24, 6.0),
-  ];
-
-
 export default function UTTarjetaEmpresa() {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-        <Container fixed>
+  return (
+    <Card className={classes.card}>
+      <div className="row">
+        <div className="col-md-12">
+          <CardHeader gutterBottom
+            className={classes.cabecera}
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title="ACCENTURE CHILE"
+            subheader="Empresa Multinacional" />
+        </div>
+      </div>
+      <div className="row p-2">
+        <div className="col-md-3 " >
+          <div className={classes.ContentLogo}>
+            <Avatar alt="Logo" src={logoAcce} className={classes.logo} />
+          </div>
+        </div>
+        <div className="col-md-9 text-justify">
+          <Typography variant="body2" color="textPrimary" component="p" justify='center'>
+            Accenture soluciona los retos más difíciles de nuestros clientes al
+            proveer servicios en estrategia, consultoría, transformación digital,
+            tecnología y operaciones. Nos asociamos con más de tres cuartas
+            partes de las compañías Fortune Global 500, impulsando la
+            innovación para mejorar la forma en que el mundo funciona y vive.
+            Con experiencia en más de 40 industrias y en todas las funciones de
+            negocio, ofrecemos resultados transformacionales para un exigente
+            nuevo mundo digital.
+          </Typography>
+          <Divider />
+        </div>
+      </div>
+      <div className="row p-2 bg-light">
+        <div className="col-md-8 sm-12">
+          <Typography variant="body2" color="textSecondary" gutterBottom noWrap>
+            <WorkIcon /> Accenture Chile, asesorias Y servicios limitada.
+          </Typography>
+          <Typography variant="body2" color="textSecondary" gutterBottom noWrap>
+            <UbicacionIcon /> Apoquinto #5550, torre A, piso 14, Las Condes, Santiago, CHILE.
+          </Typography>
+          <Typography variant="body2" color="textSecondary" gutterBottom noWrap>
+            < WebIcon /><Link href="https://www.accenture.com/cl-es"> Accenture Page</Link>
+          </Typography>
 
-            <Card className={classes.card}>
-                <CardHeader gutterBottom className={classes.cabecera} title="ACCENTURE CHILE" />                        
+        </div>
+        <div className="col-md-4 sm-12 text-sm-center">
+          <Grid container className={classes.grid}>
+            <Avatar src={boss1} className={classes.AvatarBoss} />
+            <Avatar src={boss2} className={classes.AvatarBoss} />
+          </Grid>
+        </div>
+      </div>
+      <div className="row p-2 bg-dark ">
+        <div className="col-md-3 sm-12 ">
+          <Grid container className={classes.grid}>
+            <Fab className={classes.fab}>
+              <Avatar src={logoFace} className={classes.avSocial} />
+            </Fab>
+            <Fab className={classes.fab}>
+              <Avatar src={logoInta} className={classes.avSocial} />
+            </Fab>
+            <Fab className={classes.fab}>
+              <Avatar src={logoLink} className={classes.avSocial} />
+            </Fab>
+            <Fab className={classes.fab}>
+              <Avatar src={logoYout} className={classes.avSocial} />
+            </Fab>
+          </Grid>
+        </div>
+        <Hidden smDown>
+          <div className="col-md-9 sm-12 text-right justify-content-md-center" >
+            <Rating value={4} max={5} />
+          </div>
+        </Hidden>
+      </div>
 
-                <CardContent className={classes.cuerpo}>
-                    
-                    <div className={clsx(classes.column, classes.logo)}>
-                        <Avatar aria-label="Recipe" className={classes.avatar} src="..\images\flechaAzul.png" /> 
-                        
-                    </div>      
-                                
-                    <div className={classes.column} />
-                    <div className={classes.column}>
-                        <Typography variant="caption">
-                        Accenture soluciona los retos más difíciles de nuestros clientes al
-                        proveer servicios en estrategia, consultoría, transformación digital,
-                        tecnología y operaciones. Nos asociamos con más de tres cuartas
-                        partes de las compañías Fortune Global 500, impulsando la
-                        innovación para mejorar la forma en que el mundo funciona y vive.
-                        Con experiencia en más de 40 industrias y en todas las funciones de
-                        negocio, ofrecemos resultados transformacionales para un exigente
-                        nuevo mundo digital.
-                                        
-                        </Typography>
-                    </div>
-                    <Divider />   
-                    <div className={classes.column}>
-                        <Typography variant="caption" className={classes.items}>
-                        <p>
-                            <i class="material-icons">
-                            picture_in_picture
-                            </i>
-                            ACCENTURE CHILE, ASESORIAS Y SERVICIOS LIMITADA
-                        </p>
-                        <p>
-                            <i class="material-icons">
-                            business
-                            </i>
-                            EMPRESA MULTINACIONAL
-                        </p>
-                        <p>
-                            <i class="material-icons">
-                                language
-                            </i>
-                            <Link href="https://www.accenture.com/cl-es">
-                                Accenture Page
-                            </Link>
-                        </p>
-                        <p>
-                            <i class="material-icons">
-                                room
-                            </i>
-                            APOQUINDO 5550, TORRE A, PISO 14, LAS CONDES, SANTIAGO, CHILE
-                        </p>
-                        </Typography>
-                    </div>                                           
+    </Card>
 
-                </CardContent>
-            </Card>            
-            <ExpansionPanel >
-                <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1c-content"
-                id="panel1c-header"
-                >
-                    <div className={classes.column}>
-                        <Typography className={classes.details}>Certificaciones</Typography>
-                    </div>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={classes.details}>
-                    <div className={classes.contenedorChip} >
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>         
-                   </div>
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel >
-                <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1c-content"
-                id="panel1c-header"
-                >
-                    <div className={classes.column}>
-                        <Typography className={classes.details}>Servicios</Typography>
-                    </div>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={classes.details}>
-                    <div className={classes.column} />
-                    <div className={classes.contenedorChip} >
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>         
-                   </div>
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel >
-                <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1c-content"
-                id="panel1c-header"
-                >
-                    <div className={classes.column}>
-                        <Typography className={classes.details}>Productos</Typography>
-                    </div>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={classes.details}>
-                    <div className={classes.column} />
-                    <div className={classes.contenedorChip} >
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>         
-                   </div>
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel >
-                <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1c-content"
-                id="panel1c-header"
-                >
-                    <div className={classes.column}>
-                        <Typography className={classes.details}>Principales Clientes</Typography>
-                    </div>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={classes.details}>
-                    <div className={classes.column} />
-                    <div className={classes.contenedorChip} >
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>
-                    <Chip className={classes.chip} variant="outlined" size="small" label="Basic Chip" avatar={<Avatar><CheckIcon /></Avatar>}/>         
-                   </div>
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel >
-                <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1c-content"
-                id="panel1c-header"
-                >
-                    <div className={classes.column}>
-                        <Typography className={classes.details}>Licitaciones Adjudicadas</Typography>
-                    </div>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={classes.details}>
-                    <div className={classes.column} />
-                    <Paper className={classes.paper}>
-                        <Table className={classes.table}>
-                            <TableHead>
-                            <TableRow>
-                                <StyledTableCell>Iniciativa</StyledTableCell>
-                                <StyledTableCell align="right">Descripci&oacute;n Breve</StyledTableCell>
-                                <StyledTableCell align="right">Responsable Banco</StyledTableCell>
-                                <StyledTableCell align="right">Estado</StyledTableCell>
-                                <StyledTableCell align="right">Calificaci&oacute;n</StyledTableCell>
-                            </TableRow>
-                            </TableHead>
-                            <TableBody>
-                            {rows.map(row => (
-                                <StyledTableRow key={row.iniciativa}>
-                                <StyledTableCell component="th" scope="row">
-                                    {row.iniciativa}
-                                </StyledTableCell>
-                                <StyledTableCell align="right">{row.descripcion}</StyledTableCell>
-                                <StyledTableCell align="right">{row.responsableB}</StyledTableCell>
-                                <StyledTableCell align="right">{row.estado}</StyledTableCell>
-                                <StyledTableCell align="right">{row.calificacion}</StyledTableCell>
-                                </StyledTableRow>
-                            ))}
-                            </TableBody>
-                        </Table>
-                    </Paper>
-
-
-                   
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
-        </Container>
-    );
+  );
 }
