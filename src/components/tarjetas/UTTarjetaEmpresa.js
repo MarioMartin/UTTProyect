@@ -42,24 +42,18 @@ const useStyles = makeStyles(theme => ({
   logo: {
     width: '100%',
     height: '100%',
-    borderRadius: 0,
-  },
-  ContentLogo: {
-    border: '1px solid gray',
-    padding: 10,
-
+    borderRadius: 2,
   },
   avSocial: {
     width: 30,
     height: 30,
     [theme.breakpoints.down('sm')]: {
-      width: 60,
-      height: 60,
-
+      width: 50,
+      height: 50,
     },
     /* '&:hover': {
-       width: 35,
-       height: 35,
+       width: 55,
+       height: 55,
      },*/
 
   },
@@ -82,10 +76,11 @@ const useStyles = makeStyles(theme => ({
   fab: {
     width: 30,
     height: 30,
+    borderRadius: 2,
     backgroundColor: 'transparent',
     [theme.breakpoints.down('sm')]: {
-      width: 60,
-      height: 60,
+      width: 50,
+      height: 50,
     }
   },
 }));
@@ -97,7 +92,7 @@ export default function UTTarjetaEmpresa() {
     <Card className={classes.card}>
       <div className="row">
         <div className="col-md-12">
-          <CardHeader gutterBottom
+          <CardHeader 
             className={classes.cabecera}
             action={
               <IconButton aria-label="settings">
@@ -108,13 +103,14 @@ export default function UTTarjetaEmpresa() {
             subheader="Empresa Multinacional" />
         </div>
       </div>
-      <div className="row p-2">
-        <div className="col-md-3 " >
-          <div className={classes.ContentLogo}>
-            <Avatar alt="Logo" src={logoAcce} className={classes.logo} />
-          </div>
+      <div className="row p-2 pl-3 pr-3">
+        <div className="col-3 col-md-3" >
+          <Avatar alt="Logo" src={logoAcce} className={classes.logo} />
         </div>
-        <div className="col-md-9 text-justify">
+        <div className="col-9 d-md-none" >
+          <Rating value={4} max={5} />
+        </div>
+        <div className="col-12 col-md-9 pt-4 pt-md-0 text-justify"  >
           <Typography variant="body2" color="textPrimary" component="p" justify='center'>
             Accenture soluciona los retos más difíciles de nuestros clientes al
             proveer servicios en estrategia, consultoría, transformación digital,
@@ -125,10 +121,9 @@ export default function UTTarjetaEmpresa() {
             negocio, ofrecemos resultados transformacionales para un exigente
             nuevo mundo digital.
           </Typography>
-          <Divider />
         </div>
       </div>
-      <div className="row p-2 bg-light">
+      <div className="row p-2 pl-3 pr-3 border-top-1 border border-secondary bg-light bt-1">
         <div className="col-md-8 sm-12">
           <Typography variant="body2" color="textSecondary" gutterBottom noWrap>
             <WorkIcon /> Accenture Chile, asesorias Y servicios limitada.

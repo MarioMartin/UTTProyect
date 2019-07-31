@@ -15,6 +15,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import LicitIcon from '@material-ui/icons/InsertChart';
 import PeopleIcon from '@material-ui/icons/People';
 import SearchIcon from '@material-ui/icons/SearchOutlined';
+import BusinessIcon from '@material-ui/icons/Business';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -204,6 +205,13 @@ export default function UTMenuBarra() {
         <ListItem component={Link} to="/ConsultaSkill" button >
           <PeopleIcon />
           <ListItemText primary={"CONSULTA SKILL"} />
+        </ListItem>
+      </List>
+      <Divider />
+      <List>
+        <ListItem component={Link} to="/bempresa" button >
+          <BusinessIcon />
+          <ListItemText primary={"CONSULTA EMPRESA"} />
         </ListItem>
       </List>
       <Divider />
