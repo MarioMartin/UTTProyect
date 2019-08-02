@@ -1,0 +1,42 @@
+{
+    "listaEmpresas": [
+        "Todas",
+         "Accenture",
+         "Kibernum",
+         "Everis",
+         "TATA",
+         "IBM"
+    ],
+    "empresas": [
+        {
+            "nombre": "Accenture",
+            "foto": "m.hernandez.caceres",
+            "web": "www.accenture.com",
+            "contrato": "BECH",
+            "descripcion": "Full Stack Developer - Code and test multiple components of application code across one or more clients. Perform maintenance, enhancements and/or development work.",
+            "careerLevel": "11 - Analyst",
+            "ubicacion": "Santiago, Chile",
+            "skills": [
+                {
+                    "Skill": "SQL",
+                    "level": 1
+                }
+            ]
+        },
+        {
+            "nombre": "TATA",
+            "foto": "m.hernandez.caceres",
+            "web": "www.accenture.com",
+            "contrato": "BECH",
+            "descripcion": "Full Stack Developer - Code and test multiple components of application code across one or more clients. Perform maintenance, enhancements and/or development work.",
+            "careerLevel": "11 - Analyst",
+            "ubicacion": "Santiago, Chile",
+            "skills": [
+                {
+                    "Skill": "SQL",
+                    "level": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,54 +1,28 @@
 import React from 'react';
-import clsx from 'clsx';
-import Select from 'react-select';
-import { emphasize, makeStyles, useTheme } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import NoSsr from '@material-ui/core/NoSsr';
-import TextField from '@material-ui/core/TextField';
-import Paper from '@material-ui/core/Paper';
-import Chip from '@material-ui/core/Chip';
-import MenuItem from '@material-ui/core/MenuItem';
-import CancelIcon from '@material-ui/icons/Cancel';
 import PropTypes from 'prop-types';
-
-import { skills } from '../../skills.json';
-
-
-const suggestions = skills.map((data, i) => ({
-  value: data,
-  label: data,
-}));
+import Select from 'react-select';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
 
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     height: 250,
-    width: 400,
-    
+    minWidth: 190,
+    maxWidth: 500,
+    display: 'block',
   },
   input: {
     display: 'flex',
+    //width: 300,
     padding: 0,
-    height: 'auto',
+    height: 45,
     backgroundColor: 'white',
-  },
-  valueContainer: {
-    //display: 'flex',
-    flexWrap: 'wrap',
-    flex: 1,
-    alignItems: 'center',
-    overflow: 'hidden',
-
-  },
-  chip: {
-    margin: theme.spacing(0.5, 0.25),
-  },
-  chipFocused: {
-    backgroundColor: emphasize(
-      theme.palette.type === 'light' ? theme.palette.grey[300] : theme.palette.grey[700],
-      0.08,
-    ),
+    borderRadius: 2,
+    fontSize: 16,
   },
   noOptionsMessage: {
     padding: theme.spacing(1, 2),
@@ -56,21 +30,22 @@ const useStyles = makeStyles(theme => ({
   singleValue: {
     fontSize: 16,
   },
-  placeholder: {
-    position: 'absolute',
-    left: 2,
-    bottom: 6,
-    fontSize: 16,
-  },
-  paper: {
-    position: 'absolute',
-    zIndex: 1,
-    marginTop: theme.spacing(1),
-    left: 0,
-    right: 0,
-  },
   divider: {
     height: theme.spacing(2),
+  },
+  iconButton: {
+    padding: 2,
+
+    //alignItems:'center',
+  },
+  grid: {
+    backgroundColor: 'white',
+    border: '1px solid white',
+    height: 45,
+    [theme.breakpoints.down('sm')]: {
+      //Justify: "center",
+      //justifyContent: "center",
+    }
   },
 }));
 
@@ -88,8 +63,6 @@ function NoOptionsMessage(props) {
 
 NoOptionsMessage.propTypes = {
   children: PropTypes.node,
-  innerProps: PropTypes.object,
-  selectProps: PropTypes.object.isRequired,
 };
 
 function inputComponent({ inputRef, ...props }) {
@@ -97,7 +70,10 @@ function inputComponent({ inputRef, ...props }) {
 }
 
 inputComponent.propTypes = {
-  inputRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  inputRef: PropTypes.oneOfType([
+    PropTypes.func
+
+  ]),
 };
 
 function Control(props) {
@@ -125,13 +101,6 @@ function Control(props) {
   );
 }
 
-Control.propTypes = {
-  children: PropTypes.node,
-  innerProps: PropTypes.object,
-  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-  selectProps: PropTypes.object.isRequired,
-};
-
 function Option(props) {
   return (
     <MenuItem
@@ -148,120 +117,39 @@ function Option(props) {
   );
 }
 
-Option.propTypes = {
-  children: PropTypes.node,
-  innerProps: PropTypes.object,
-  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-  isFocused: PropTypes.bool,
-  isSelected: PropTypes.bool,
-};
-
-function Placeholder(props) {
-  return (
-    <Typography
-      color="textSecondary"
-      className={props.selectProps.classes.placeholder}
-      {...props.innerProps}
-    >
-      Seleccionar skills {/*props.children*/}
-    </Typography>
-  );
-}
-
-Placeholder.propTypes = {
-  children: PropTypes.node,
-  innerProps: PropTypes.object,
-  selectProps: PropTypes.object.isRequired,
-};
-
-function SingleValue(props) {
-  return (
-    <Typography className={props.selectProps.classes.singleValue} {...props.innerProps}>
-      {props.children}
-    </Typography>
-  );
-}
-
-SingleValue.propTypes = {
-  children: PropTypes.node,
-  innerProps: PropTypes.object,
-  selectProps: PropTypes.object.isRequired,
-};
-
-function ValueContainer(props) {
-  return <div className={props.selectProps.classes.valueContainer}>{props.children}</div>;
-}
-
-ValueContainer.propTypes = {
-  children: PropTypes.node,
-  selectProps: PropTypes.object.isRequired,
-};
-
-function MultiValue(props) {
-  return (
-    <Chip
-      tabIndex={-1}
-      label={props.children}
-      className={clsx(props.selectProps.classes.chip, {
-        [props.selectProps.classes.chipFocused]: props.isFocused,
-      })}
-      onDelete={props.removeProps.onClick}
-      deleteIcon={<CancelIcon {...props.removeProps} />}
-    />
-  );
-}
-
-MultiValue.propTypes = {
-  children: PropTypes.node,
-  isFocused: PropTypes.bool,
-  removeProps: PropTypes.object.isRequired,
-  selectProps: PropTypes.object.isRequired,
-};
-
-function Menu(props) {
-  return (
-    <Paper square className={props.selectProps.classes.paper} {...props.innerProps}>
-      {props.children}
-    </Paper>
-  );
-}
-
-Menu.propTypes = {
-  children: PropTypes.node,
-  innerProps: PropTypes.object,
-  selectProps: PropTypes.object,
-};
-
 const components = {
   Control,
-  Menu,
-  MultiValue,
   NoOptionsMessage,
   Option,
-  Placeholder,
-  SingleValue,
-  ValueContainer,
 };
 
-export default function UTBuscadorEmpresas(/*{ onChange }*/) {
+export default function UTBuscadorEmpresas({data, getBusqueda}) {
   const classes = useStyles();
   const theme = useTheme();
-  const [multi, setMulti] = React.useState(null);
+  const [single, setSingle] = React.useState(null);
+  const [empresas, setEmpresas] = React.useState(data);
 
-  function handleChangeMulti(value) {
+  const suggestions = empresas.map((data, i) => ({
+    value: data,
+    label: data,
+  }));
 
-    const lista = [];
 
-      if (value == null) {
-        //controla nulo
-      } else {
-        for (let i = 0; i < value.length; i++) {
-          lista.push(value[i].value);
-        }
-      }   
-    setMulti(value);
-    //onChange(lista);
+  function handleChangeSingle(value) {
+
+
+   /* const empresa = listaEmpresas.filter((e, i) => {  
+      return e == value.value; 
+    })
+
+    setEmpresas(empresa);*/
+    //getData(value.value);
+    setSingle(value);
+    //console.log(value);
+    getBusqueda(value.value);
   }
+
+
 
   const selectStyles = {
     input: base => ({
@@ -275,26 +163,22 @@ export default function UTBuscadorEmpresas(/*{ onChange }*/) {
 
   return (
     <div className={classes.root}>
-      <NoSsr>
-        <Select
-          classes={classes}
-          styles={selectStyles}
-          inputId="react-select-multiple"
-          TextFieldProps={{
-            //label: 'Skiist',
-            InputLabelProps: {
-              htmlFor: 'react-select-multiple',
-              shrink: true,
-            },
-            placeholder: 'Skills',
-          }}
-          options={suggestions}
-          components={components}
-          value={multi}
-          onChange={handleChangeMulti}
-          
-        />
-      </NoSsr>
+      <Select
+        classes={classes}
+        styles={selectStyles}
+        inputId="react-select-single"
+        TextFieldProps={{
+          InputLabelProps: {
+            htmlFor: 'react-select-single',
+            shrink: true,
+          },
+        }}
+        placeholder="Selecciona Empresa"
+        options={suggestions}
+        components={components}
+        value={single}
+        onChange={handleChangeSingle}
+      />
     </div>
   );
 }
