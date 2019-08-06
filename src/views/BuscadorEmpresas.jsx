@@ -28,7 +28,7 @@ export default function BuscadorEmpresas() {
                 <div className="row" style={{ height: 150 }}>
                     <div className="col-md-12 mt-5">
                         <UTBuscadorEmpresas data={listaEmpresas} getBusqueda={getBusqueda} />
-                        <UTBuscadorEmpresas data={listaEmpresas} getBusqueda={getBusqueda} />
+                        
                     </div>
                 </div>
                 <div className="row mt-5">

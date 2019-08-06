@@ -103,7 +103,7 @@ export default function UTTarjetaEmpresa(props) {
                   <MoreVertIcon />
                 </IconButton>
               }
-              title="ACCENTURE CHILE"
+              title={data.nombre}
               subheader="Empresa Multinacional" />
           </div>
         </div>
