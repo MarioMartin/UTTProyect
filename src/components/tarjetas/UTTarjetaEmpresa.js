@@ -25,7 +25,9 @@ import logoYout from '../../images/logos/social/icons8-youtube.png';
 import boss1 from '../../images/ayben.cardenas.jpg';
 import boss2 from '../../images/agustin.alcaide.jpg';
 
-import Rating from 'material-ui-rating'
+import Rating from 'material-ui-rating' 
+
+import DespliegueEmpresa from './UTDespliegueEmpresa';
 
 
 const useStyles = makeStyles(theme => ({
@@ -147,6 +149,11 @@ export default function UTTarjetaEmpresa(props) {
             </Grid>
           </div>
         </div>
+        
+        <div>
+          <DespliegueEmpresa />
+        </div>
+            
         <div className="row p-2 bg-dark ">
           <div className="col-md-3 sm-12 ">
             <Grid container className={classes.grid}>
@@ -170,7 +177,6 @@ export default function UTTarjetaEmpresa(props) {
             </div>
           </Hidden>
         </div>
-
       </Card>
     )
   });
