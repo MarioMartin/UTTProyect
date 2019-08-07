@@ -4,6 +4,9 @@ import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import IconButton from '@material-ui/core/IconButton';
+import UTTCertificaciones from './UTTCertiificaciones';
+import UTTPrincipalesClientes from './UTTPrincipalesClientes';
+import UTTLicitacionesAdjudicadas from './UTTLicitacionesAdjudicadas';
 
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -46,7 +49,9 @@ const ExpansionPanel = withStyles({
   
   const ExpansionPanelDetails = withStyles(theme => ({
     root: {
-      padding: theme.spacing(2),
+      padding: theme.spacing(0),
+      margin: theme.spacing(0),
+      //backgroundColor:'gray',
     },
   }))(MuiExpansionPanelDetails);
   
@@ -64,9 +69,7 @@ const ExpansionPanel = withStyles({
             <Typography>Certificaciones</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>
-              Lorem
-            </Typography>
+            <UTTCertificaciones />
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
@@ -94,9 +97,7 @@ const ExpansionPanel = withStyles({
             <Typography>Principales Clientes</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>
-              Lorem
-            </Typography>
+            <UTTPrincipalesClientes />
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel square expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
@@ -104,11 +105,7 @@ const ExpansionPanel = withStyles({
             <Typography>Licitaciones Aplicadas</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-              sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-            </Typography>
+            <UTTLicitacionesAdjudicadas />
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>

@@ -7,7 +7,6 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         justifyContent: 'left',
         flexWrap: 'wrap',
-
     },
     chip: {
         margin: theme.spacing(1),
@@ -25,6 +24,7 @@ export default function UTSChip(props) {
             size="small"
             label={data}
             color="primary"
+            className={classes.chip}
         />
     ))
     
