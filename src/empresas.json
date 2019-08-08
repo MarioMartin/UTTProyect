@@ -22,11 +22,32 @@
             "principalesClientes": ["Movistar", "Banco ITAU", "Anglo American", "Banco Security", "Scotiabank","RedBanc", "Falabella"],
             "licitaciones adjudicadas": [
                 {
-                    "iniciativa": ["PYT-5103", "Cat. 14567","MAY-1213", "ICA-1455"],
-                    "descripcionLicitacion": ["Modificaciones Corfo","Implementacion Tablero Gestion MUS","Migracion DB2","Aumento campo Monto en Credito Hipotecario"],
-                    "responsableBanco": ["Eugenio Castillo","Luis Moreno","Jaqueline Iglesias0","Viviana Caro"],
-                    "estado": ["Finalizada","En Curso","Finalizada","Suspendida"],
-                    "calificacion": [4,0,5,1] 
+                    "iniciativa": "PYT-5103",
+                    "descripcionLicitacion": "Modificaciones Corfo",
+                    "responsableBanco": "Eugenio Castillo",
+                    "estado": "Finalizada",
+                    "calificacion": 4 
+                },
+                {
+                    "iniciativa": "Cat. 14567",
+                    "descripcionLicitacion": "Implementacion Tablero Gestion MUS",
+                    "responsableBanco": "Luis Moreno",
+                    "estado": "En Curso",
+                    "calificacion": 0
+                },
+                {
+                    "iniciativa": "MAY-1213",
+                    "descripcionLicitacion": "Migracion DB2",
+                    "responsableBanco": "Jaqueline Iglesias0",
+                    "estado": "Finalizada",
+                    "calificacion": 5 
+                },
+                {
+                    "iniciativa": "ICA-1455",
+                    "descripcionLicitacion": "Aumento campo Monto en Credito Hipotecario",
+                    "responsableBanco": "Viviana Caro",
+                    "estado": "Suspendida",
+                    "calificacion": 1
                 }
              ]
         },
@@ -44,11 +65,32 @@
             "principalesClientes": ["Movistar", "Banco ITAU", "Anglo American", "Banco Security", "Scotiabank","RedBanc", "Falabella"],
             "licitaciones adjudicadas": [ 
                 {
-                    "iniciativa": ["PYT-5103", "Cat. 14567","MAY-1213", "ICA-1455"],
-                    "descripcionLicitacion": ["Modificaciones Corfo","Implementacion Tablero Gestion MUS","Migracion DB2","Aumento campo Monto en Credito Hipotecario"],
-                    "responsableBanco": ["Eugenio Castillo","Luis Moreno","Jaqueline Iglesias0","Viviana Caro"],
-                    "estado": ["Finalizada","En Curso","Finalizada","Suspendida"],
-                    "calificacion": [4,0,5,1] 
+                    "iniciativa": "PYT-5103",
+                    "descripcionLicitacion": "Modificaciones Corfo",
+                    "responsableBanco": "Eugenio Castillo",
+                    "estado": "Finalizada",
+                    "calificacion": 4 
+                },
+                {
+                    "iniciativa": "Cat. 14567",
+                    "descripcionLicitacion": "Implementacion Tablero Gestion MUS",
+                    "responsableBanco": "Luis Moreno",
+                    "estado": "En Curso",
+                    "calificacion": 0
+                },
+                {
+                    "iniciativa": "MAY-1213",
+                    "descripcionLicitacion": "Migracion DB2",
+                    "responsableBanco": "Jaqueline Iglesias0",
+                    "estado": "Finalizada",
+                    "calificacion": 5 
+                },
+                {
+                    "iniciativa": "ICA-1455",
+                    "descripcionLicitacion": "Aumento campo Monto en Credito Hipotecario",
+                    "responsableBanco": "Viviana Caro",
+                    "estado": "Suspendida",
+                    "calificacion": 1
                 }
             ]
         },
@@ -66,11 +108,32 @@
             "principalesClientes": ["BANCA", "GOBIERNO", "TRANSPORTE", "RETAIL", "TELECUMUNICACIONES","AUTOMOTORAS", "SEGUROS"],
             "licitaciones adjudicadas": [ 
                 {
-                    "iniciativa": ["PYT-5103", "Cat. 14567","MAY-1213", "ICA-1455"],
-                    "descripcionLicitacion": ["Modificaciones Corfo","Implementacion Tablero Gestion MUS","Migracion DB2","Aumento campo Monto en Credito Hipotecario"],
-                    "responsableBanco": ["Eugenio Castillo","Luis Moreno","Jaqueline Iglesias0","Viviana Caro"],
-                    "estado": ["Finalizada","En Curso","Finalizada","Suspendida"],
-                    "calificacion": [4,0,5,1] 
+                    "iniciativa": "PYT-5103",
+                    "descripcionLicitacion": "Modificaciones Corfo",
+                    "responsableBanco": "Eugenio Castillo",
+                    "estado": "Finalizada",
+                    "calificacion": 4 
+                },
+                {
+                    "iniciativa": "Cat. 14567",
+                    "descripcionLicitacion": "Implementacion Tablero Gestion MUS",
+                    "responsableBanco": "Luis Moreno",
+                    "estado": "En Curso",
+                    "calificacion": 0
+                },
+                {
+                    "iniciativa": "MAY-1213",
+                    "descripcionLicitacion": "Migracion DB2",
+                    "responsableBanco": "Jaqueline Iglesias0",
+                    "estado": "Finalizada",
+                    "calificacion": 5 
+                },
+                {
+                    "iniciativa": "ICA-1455",
+                    "descripcionLicitacion": "Aumento campo Monto en Credito Hipotecario",
+                    "responsableBanco": "Viviana Caro",
+                    "estado": "Suspendida",
+                    "calificacion": 1
                 }
             ]
         },
@@ -88,11 +151,32 @@
             "principalesClientes": ["Movistar", "Banco ITAU", "Anglo American", "Banco Security", "Scotiabank","RedBanc", "Falabella"],
             "licitaciones adjudicadas": [ 
                 {
-                    "iniciativa": ["PYT-5103", "Cat. 14567","MAY-1213", "ICA-1455"],
-                    "descripcionLicitacion": ["Modificaciones Corfo","Implementacion Tablero Gestion MUS","Migracion DB2","Aumento campo Monto en Credito Hipotecario"],
-                    "responsableBanco": ["Eugenio Castillo","Luis Moreno","Jaqueline Iglesias0","Viviana Caro"],
-                    "estado": ["Finalizada","En Curso","Finalizada","Suspendida"],
-                    "calificacion": [4,0,5,1] 
+                    "iniciativa": "PYT-5103",
+                    "descripcionLicitacion": "Modificaciones Corfo",
+                    "responsableBanco": "Eugenio Castillo",
+                    "estado": "Finalizada",
+                    "calificacion": 4 
+                },
+                {
+                    "iniciativa": "Cat. 14567",
+                    "descripcionLicitacion": "Implementacion Tablero Gestion MUS",
+                    "responsableBanco": "Luis Moreno",
+                    "estado": "En Curso",
+                    "calificacion": 0
+                },
+                {
+                    "iniciativa": "MAY-1213",
+                    "descripcionLicitacion": "Migracion DB2",
+                    "responsableBanco": "Jaqueline Iglesias0",
+                    "estado": "Finalizada",
+                    "calificacion": 5 
+                },
+                {
+                    "iniciativa": "ICA-1455",
+                    "descripcionLicitacion": "Aumento campo Monto en Credito Hipotecario",
+                    "responsableBanco": "Viviana Caro",
+                    "estado": "Suspendida",
+                    "calificacion": 1
                 }
             ]
         },
@@ -110,11 +194,32 @@
             "principalesClientes": ["Movistar", "Banco ITAU", "Anglo American", "Banco Security", "Scotiabank","RedBanc", "Falabella"],
             "licitaciones adjudicadas": [ 
                 {
-                    "iniciativa": ["PYT-5103", "Cat. 14567","MAY-1213", "ICA-1455"],
-                    "descripcionLicitacion": ["Modificaciones Corfo","Implementacion Tablero Gestion MUS","Migracion DB2","Aumento campo Monto en Credito Hipotecario"],
-                    "responsableBanco": ["Eugenio Castillo","Luis Moreno","Jaqueline Iglesias0","Viviana Caro"],
-                    "estado": ["Finalizada","En Curso","Finalizada","Suspendida"],
-                    "calificacion": [4,0,5,1] 
+                    "iniciativa": "PYT-51043",
+                    "descripcionLicitacion": "Modificaciones Corfo",
+                    "responsableBanco": "Eugenio Castillo",
+                    "estado": "En Curso",
+                    "calificacion": 0 
+                },
+                {
+                    "iniciativa": "Cat. 1567",
+                    "descripcionLicitacion": "Implementacion Tablero Gestion MUS",
+                    "responsableBanco": "Luis Moreno",
+                    "estado": "Finalizada",
+                    "calificacion": 4
+                },
+                {
+                    "iniciativa": "MAY-12133",
+                    "descripcionLicitacion": "Migracion DB2",
+                    "responsableBanco": "Jaqueline Iglesias0",
+                    "estado": "Finalizada",
+                    "calificacion": 4 
+                },
+                {
+                    "iniciativa": "ICA-155",
+                    "descripcionLicitacion": "Aumento campo Monto en Credito Hipotecario",
+                    "responsableBanco": "Viviana Caro",
+                    "estado": "En Curso",
+                    "calificacion": 0
                 }
             ]
         }    
