@@ -11,32 +11,112 @@
         {
             "nombre": "Accenture",
             "foto": "m.hernandez.caceres",
-            "web": "www.accenture.com",
-            "contrato": "BECH",
-            "descripcion": "Full Stack Developer - Code and test multiple components of application code across one or more clients. Perform maintenance, enhancements and/or development work.",
-            "careerLevel": "11 - Analyst",
-            "ubicacion": "Santiago, Chile",
-            "skills": [
+            "web": "www.accenture.com/cl-es",
+            "nombreRazon": "ACCENTURE CHILE, ASESORIAS Y SERVICIOS LIMITADA",
+            "direccion": "APOQUINDO 5550, TORRE A, PISO 14, LAS CONDES, SANTIAGO, CHILE",
+            "tipoEmpresa": "Empresa Multinacional",
+            "descripcion": "Accenture soluciona los retos más difíciles de nuestros clientes al proveer servicios en estrategia, consultoría, transformación digital, tecnología y operaciones. Nos asociamos con más de tres cuartas partes de las compañías Fortune Global 500, impulsando la innovación para mejorar la forma en que el mundo funciona y vive. Con experiencia en más de 40 industrias y en todas las funciones de negocio, ofrecemos resultados transformacionales para un exigente nuevo mundo digital.",
+            "certificaciones": ["ISO 9001","CMMI","Six Sigma","eSCM-SP","PCMMI","ITIL","ISO 27001", "ISO 14001", "ISO 20000"       ],
+            "servicios": ["Strategy", "Consulting","Digital","Technology","Operations"],
+            "productos": [ "Mantencion"  ],
+            "principalesClientes": ["Movistar", "Banco ITAU", "Anglo American", "Banco Security", "Scotiabank","RedBanc", "Falabella"],
+            "licitaciones adjudicadas": [
                 {
-                    "Skill": "SQL",
-                    "level": 1
+                    "iniciativa": ["PYT-5103", "Cat. 14567","MAY-1213", "ICA-1455"],
+                    "descripcionLicitacion": ["Modificaciones Corfo","Implementacion Tablero Gestion MUS","Migracion DB2","Aumento campo Monto en Credito Hipotecario"],
+                    "responsableBanco": ["Eugenio Castillo","Luis Moreno","Jaqueline Iglesias0","Viviana Caro"],
+                    "estado": ["Finalizada","En Curso","Finalizada","Suspendida"],
+                    "calificacion": [4,0,5,1] 
                 }
-            ]
+             ]
         },
         {
             "nombre": "TATA",
             "foto": "m.hernandez.caceres",
-            "web": "www.accenture.com",
-            "contrato": "BECH",
-            "descripcion": "Full Stack Developer - Code and test multiple components of application code across one or more clients. Perform maintenance, enhancements and/or development work.",
-            "careerLevel": "11 - Analyst",
-            "ubicacion": "Santiago, Chile",
-            "skills": [
+            "web": "www.tcs.com/",
+            "nombreRazon": "Tata Consultancy Services Chile S.A. (TCS Chile)",
+            "direccion": "Calle Curicó 18 Santiago, SANTIAGO, CHILE",
+            "tipoEmpresa": "Empresa Multinacional",
+            "descripcion": "Aseguramos los más altos niveles de certeza y satisfacción a través de un compromiso profundo con nuestros clientes, una amplia experiencia en la industria y una red global de centros de innovación y entrega.",
+            "certificaciones": ["ISO 9001:2008","ISO 27001:2013", "ISO 22301:2012", "ISO 20000:2011" ],
+            "servicios": ["Cognitive Business Operations","Consulting","Analytics and Insights","Automation & AI","IOT","Cloud Applications","Blockchain"],
+            "productos": [ "Mantencion" ],
+            "principalesClientes": ["Movistar", "Banco ITAU", "Anglo American", "Banco Security", "Scotiabank","RedBanc", "Falabella"],
+            "licitaciones adjudicadas": [ 
                 {
-                    "Skill": "SQL",
-                    "level": 1
+                    "iniciativa": ["PYT-5103", "Cat. 14567","MAY-1213", "ICA-1455"],
+                    "descripcionLicitacion": ["Modificaciones Corfo","Implementacion Tablero Gestion MUS","Migracion DB2","Aumento campo Monto en Credito Hipotecario"],
+                    "responsableBanco": ["Eugenio Castillo","Luis Moreno","Jaqueline Iglesias0","Viviana Caro"],
+                    "estado": ["Finalizada","En Curso","Finalizada","Suspendida"],
+                    "calificacion": [4,0,5,1] 
                 }
             ]
-        }
+        },
+        {
+            "nombre": "Kibernum",
+            "foto": "m.hernandez.caceres",
+            "web": "www.kibernum.com/",
+            "nombreRazon": "Ingenieria Informatica Kibernum S.a.",
+            "direccion": "San Antonio 580, Santiago, Región Metropolitana, Chile",
+            "tipoEmpresa": "Empresa Multinacional",
+            "descripcion": "Crear e implementar servicios IT de excelencia; siendo cercanos y comprometidos con generar valor para nuestros clientes, accionistas, colaboradores y la sociedad; construyendo un espacio sustentable con alto grado de felicidad.",
+            "certificaciones": ["ISO 9001:2008","ISO 27001:2013", "ISO 22301:2012", "ISO 20000:2011"       ],
+            "servicios": ["Software Engineering","IT Staffing","IT Academy", "IT Consulting"],
+            "productos": [ "Mantencion"  ],
+            "principalesClientes": ["BANCA", "GOBIERNO", "TRANSPORTE", "RETAIL", "TELECUMUNICACIONES","AUTOMOTORAS", "SEGUROS"],
+            "licitaciones adjudicadas": [ 
+                {
+                    "iniciativa": ["PYT-5103", "Cat. 14567","MAY-1213", "ICA-1455"],
+                    "descripcionLicitacion": ["Modificaciones Corfo","Implementacion Tablero Gestion MUS","Migracion DB2","Aumento campo Monto en Credito Hipotecario"],
+                    "responsableBanco": ["Eugenio Castillo","Luis Moreno","Jaqueline Iglesias0","Viviana Caro"],
+                    "estado": ["Finalizada","En Curso","Finalizada","Suspendida"],
+                    "calificacion": [4,0,5,1] 
+                }
+            ]
+        },
+        {
+            "nombre": "Everis",
+            "foto": "m.hernandez.caceres",
+            "web": "www.everis.com/chile/es/home-chile",
+            "nombreRazon": "Everis Chile S.A.",
+            "direccion": "Av Libertador Bernardo O'Higgins 1449, Santiago, Región Metropolitana, Chile",
+            "tipoEmpresa": "Consultoría en Informática",
+            "descripcion": "Somos un equipo de personas apasionadas por lo que hacen y lo que creen de ámbito mundial, liderados por valores y donde cualquier sueño es alcanzable. Nuestra razón de ser son las personas, creemos firmemente en su desarrollo integral y son nuestro más preciado activo, ya que sin ellos nada sería posible.",
+            "certificaciones": ["ISO 9001:2008","ISO 27001:2013", "ISO 22301:2012", "ISO 20000:2011"       ],
+            "servicios": ["Disruption", "Consulting","Transformation","Technology","Operations"],
+            "productos": [ "Mantencion"  ],
+            "principalesClientes": ["Movistar", "Banco ITAU", "Anglo American", "Banco Security", "Scotiabank","RedBanc", "Falabella"],
+            "licitaciones adjudicadas": [ 
+                {
+                    "iniciativa": ["PYT-5103", "Cat. 14567","MAY-1213", "ICA-1455"],
+                    "descripcionLicitacion": ["Modificaciones Corfo","Implementacion Tablero Gestion MUS","Migracion DB2","Aumento campo Monto en Credito Hipotecario"],
+                    "responsableBanco": ["Eugenio Castillo","Luis Moreno","Jaqueline Iglesias0","Viviana Caro"],
+                    "estado": ["Finalizada","En Curso","Finalizada","Suspendida"],
+                    "calificacion": [4,0,5,1] 
+                }
+            ]
+        },
+        {
+            "nombre": "IBM",
+            "foto": "m.hernandez.caceres",
+            "web": "www.ibm.com/cl-es",
+            "nombreRazon": "IBM DE CHILE S.A.C",
+            "direccion": "Av. Providencia 655, Santiago, Providencia, Región Metropolitana, Chile",
+            "tipoEmpresa": "Empresa Multinacional",
+            "descripcion": "IBM soluciona los retos más difíciles de nuestros clientes al proveer servicios en estrategia, consultoría, transformación digital, tecnología y operaciones. Nos asociamos con más de tres cuartas partes de las compañías Fortune Global 500, impulsando la innovación para mejorar la forma en que el mundo funciona y vive. Con experiencia en más de 40 industrias y en todas las funciones de negocio, ofrecemos resultados transformacionales para un exigente nuevo mundo digital.",
+            "certificaciones": ["ISO 9001:2008","ISO 27001:2013", "ISO 22301:2012", "ISO 20000:2011"       ],
+            "servicios": ["Servicios de consultoría","Servicios de tecnología","Financiamiento","Capacitación y habilidades(US)"],
+            "productos": [ "Mantencion"  ],
+            "principalesClientes": ["Movistar", "Banco ITAU", "Anglo American", "Banco Security", "Scotiabank","RedBanc", "Falabella"],
+            "licitaciones adjudicadas": [ 
+                {
+                    "iniciativa": ["PYT-5103", "Cat. 14567","MAY-1213", "ICA-1455"],
+                    "descripcionLicitacion": ["Modificaciones Corfo","Implementacion Tablero Gestion MUS","Migracion DB2","Aumento campo Monto en Credito Hipotecario"],
+                    "responsableBanco": ["Eugenio Castillo","Luis Moreno","Jaqueline Iglesias0","Viviana Caro"],
+                    "estado": ["Finalizada","En Curso","Finalizada","Suspendida"],
+                    "calificacion": [4,0,5,1] 
+                }
+            ]
+        }    
     ]
 }
