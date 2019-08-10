@@ -106,7 +106,7 @@ export default function UTTarjetaEmpresa(props) {
                 </IconButton>
               }
               title={data.nombre}
-              subheader="Empresa Multinacional" />
+              subheader={data.tipoEmpresa} />
           </div>
         </div>
         <div className="row p-2 pl-3 pr-3">
@@ -114,31 +114,24 @@ export default function UTTarjetaEmpresa(props) {
             <Avatar alt="Logo" src={logoAcce} className={classes.logo} />
           </div>
           <div className="col-9 d-md-none" >
-            <Rating value={4} max={5} />
+            <Rating value={data.star} max={5} />
           </div>
           <div className="col-12 col-md-9 pt-4 pt-md-0 text-justify"   >
             <Typography variant="body2" color="textPrimary" component="p" justify='center'>
-              Accenture soluciona los retos más difíciles de nuestros clientes al
-              proveer servicios en estrategia, consultoría, transformación digital,
-              tecnología y operaciones. Nos asociamos con más de tres cuartas
-              partes de las compañías Fortune Global 500, impulsando la
-              innovación para mejorar la forma en que el mundo funciona y vive.
-              Con experiencia en más de 40 industrias y en todas las funciones de
-              negocio, ofrecemos resultados transformacionales para un exigente
-              nuevo mundo digital.
+              {data.descripcion}
           </Typography>
           </div>
         </div>
         <div className="row p-2 pl-3 pr-3 border-top-1 border border-secondary bg-light bt-1">
           <div className="col-md-8 sm-12">
             <Typography variant="body2" color="textSecondary" gutterBottom noWrap>
-              <WorkIcon /> Accenture Chile, asesorias Y servicios limitada.
+              <WorkIcon /> {data.nombreRazon}
           </Typography>
             <Typography variant="body2" color="textSecondary" gutterBottom noWrap>
-              <UbicacionIcon /> Apoquinto #5550, torre A, piso 14, Las Condes, Santiago, CHILE.
+              <UbicacionIcon /> {data.direccion}
           </Typography>
             <Typography variant="body2" color="textSecondary" gutterBottom noWrap>
-              < WebIcon /><Link href="https://www.accenture.com/cl-es"> Accenture Page</Link>
+              < WebIcon /><Link href={data.web}> {"Web site "+data.nombre}</Link>
             </Typography>
 
           </div>
@@ -151,7 +144,7 @@ export default function UTTarjetaEmpresa(props) {
         </div>
         
         <div>
-          <DespliegueEmpresa />
+          <DespliegueEmpresa data={data} />
         </div>
             
         <div className="row p-2 bg-dark ">
@@ -173,7 +166,7 @@ export default function UTTarjetaEmpresa(props) {
           </div>
           <Hidden smDown>
             <div className="col-md-9 sm-12 text-right justify-content-md-center" >
-              <Rating value={4} max={5} />
+              <Rating value={data.star} max={5} />
             </div>
           </Hidden>
         </div>

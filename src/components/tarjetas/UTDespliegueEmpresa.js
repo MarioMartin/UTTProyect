@@ -55,8 +55,9 @@ const ExpansionPanel = withStyles({
     },
   }))(MuiExpansionPanelDetails);
   
-  export default function DespliegueEmpresa() {
+  export default function DespliegueEmpresa(props) {
     const [expanded, setExpanded] = React.useState(false);
+    const [data, setData] = React.useState(props.data);
   
     const handleChange = panel => (event, newExpanded) => {
       setExpanded(newExpanded ? panel : false);
@@ -69,7 +70,7 @@ const ExpansionPanel = withStyles({
             <Typography>Certificaciones</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <UTTCertificaciones />
+            <UTTCertificaciones data={data.certificaciones} />
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
@@ -97,7 +98,7 @@ const ExpansionPanel = withStyles({
             <Typography>Principales Clientes</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <UTTPrincipalesClientes />
+            <UTTPrincipalesClientes data={data.principalesClientes} />
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel square expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
@@ -105,7 +106,7 @@ const ExpansionPanel = withStyles({
             <Typography>Licitaciones Aplicadas</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <UTTLicitacionesAdjudicadas />
+            <UTTLicitacionesAdjudicadas data={data.licitaciones} />
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>

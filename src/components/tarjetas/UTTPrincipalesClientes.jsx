@@ -13,11 +13,12 @@ const lista= ["uno","a modo de ejemplo",,"certifcacion CMMI","certificacion ITIL
 
 export default function UTTPrincipalesClientes(props) {
     const classes = useStyles();
+    const [clientes,setClientes] = React.useState(props.data);
     return (
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <UTSChip data={lista}/>
+                    <UTSChip data={clientes}/>
                 </div>
             </div>
         </div>

@@ -29,11 +29,12 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-export default function UTTLicitacionesAdjudicadas() {
+export default function UTTLicitacionesAdjudicadas(props) {
     const classes = useStyles();
+    const [licitaciones,setLicitaciones]= React.useState(props.data);
 
     const data = ["1", "2", "3"];
-    const tarjetas = data.map((data, i) => {
+    const tarjetas = licitaciones.map((data, i) => {
         //console.log(data.skills);
 
         return (
@@ -41,20 +42,20 @@ export default function UTTLicitacionesAdjudicadas() {
                 <div className="row ">
                     <div className="col-6 col-md-3">
                         <Typography variant="h5" gutterBottom>
-                            PYT-5103
+                            {data.iniciativa}
                     </Typography>
                     </div>
                     <div className="col-6 col-md-3 text-right text-md-left">
-                        <span className="badge badge-success">Finalizada</span>
+                        <span className="badge badge-success">{data.estado}</span>
                     </div>
                     <div className="col-12 col-md-6 text-center text-md-right">
-                        <Rating value={4} max={5} size="small" />
+                        <Rating value={data.calificacion} max={5} size="small" />
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-12">
                         <Typography variant="button" display="block" gutterBottom>
-                            Implementacion Tablero gestion MUS
+                            {data.descripcion}
                     </Typography>
                     </div>
                 </div>

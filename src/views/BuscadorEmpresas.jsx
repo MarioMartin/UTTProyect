@@ -2,23 +2,23 @@ import React, { Fragment } from 'react';
 import UTTarjetaEmpresa from '../components/tarjetas/UTTarjetaEmpresa';
 import UTBuscadorEmpresas from '../components/buscadores/UTBuscadorEmpresas';
 
-import { listaEmpresas } from '../empresas.json';
+import { listaEmpresas, empresas } from '../empresas.json';
 
 
 export default function BuscadorEmpresas() {
 
-    const [empresas, setEmpresas] = React.useState(listaEmpresas);
+    const [empresaSeleccionada, setempresaSeleccionada] = React.useState(empresas);
 
     console.log(empresas);
     function getBusqueda(termino) {
 
         if (termino == "Todas") {
-            setEmpresas(listaEmpresas);
+            setempresaSeleccionada(empresas);
         } else {
-            const empresa = listaEmpresas.filter((e, i) => {
-                return e == termino;
+            const seleccion = empresas.filter((e, i) => {
+                return e.nombre == termino;
             })
-            setEmpresas(empresa);
+            setempresaSeleccionada(seleccion);
         }
     }
 
@@ -33,7 +33,7 @@ export default function BuscadorEmpresas() {
                 </div>
                 <div className="row mt-5">
                     <div className="col-md-8">
-                        <UTTarjetaEmpresa data={empresas} />
+                        <UTTarjetaEmpresa data={empresaSeleccionada} />
                     </div>
                     <div className="col-md-4">
 
