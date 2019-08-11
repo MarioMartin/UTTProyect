@@ -8,7 +8,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Rating from 'material-ui-rating'
-
+import ReactStars from 'react-stars'
 
 import EmailIcon from '@material-ui/icons/Email';
 
@@ -21,19 +21,18 @@ const useStyles = makeStyles(theme => ({
     inline: {
         display: 'inline',
     },
-    bg:{
+    bg: {
         //backgroundColor: '#FFE0B2',
         //padding:0,
-        borderBottom:'3px solid gray'
+        borderBottom: '3px solid gray'
     },
 
 }));
 
 export default function UTTLicitacionesAdjudicadas(props) {
     const classes = useStyles();
-    const [licitaciones,setLicitaciones]= React.useState(props.data);
+    const [licitaciones, setLicitaciones] = React.useState(props.data);
 
-    const data = ["1", "2", "3"];
     const tarjetas = licitaciones.map((data, i) => {
         //console.log(data.skills);
 
@@ -41,22 +40,23 @@ export default function UTTLicitacionesAdjudicadas(props) {
             <div className="p-0" className={classes.bg} key={i}>
                 <div className="row ">
                     <div className="col-6 col-md-3">
-                        <Typography variant="h5" gutterBottom>
+                        <Typography variant="h5" >
                             {data.iniciativa}
-                    </Typography>
+                        </Typography>
                     </div>
                     <div className="col-6 col-md-3 text-right text-md-left">
                         <span className="badge badge-success">{data.estado}</span>
                     </div>
-                    <div className="col-12 col-md-6 text-center text-md-right">
-                        <Rating value={data.calificacion} max={5} size="small" />
+                    <div className="col-12 col-md-6 text-right text-md-right mt-0 pt-0 ">
+                        <ReactStars value={data.calificacion} count={5} size={30} edit={false} color2={'#FF9800'} className="d-none d-md-block text-right"/>
+                        <ReactStars value={data.calificacion} count={5} size={15} edit={false} color2={'#FF9800'} className="d-md-none d-lg-none text-right" />
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-12">
                         <Typography variant="button" display="block" gutterBottom>
                             {data.descripcion}
-                    </Typography>
+                        </Typography>
                     </div>
                 </div>
                 <div className="row">
